@@ -11,6 +11,6 @@ public class DatabaseContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySQL("server=localhost;port=3306;database=rocket;uid=root;pwd=1234");
+        optionsBuilder.UseMySQL("server=10.133.138.76;port=3306;database=rocket;uid=rocket;pwd=1234");
     }
 }
