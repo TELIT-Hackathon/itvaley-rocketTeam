@@ -23,7 +23,7 @@ public class Test: ControllerBase
                 Username = "Peter"
             }
         };
-        Repository repository = new Repository(new DatabaseContext());
+        Repository repository = new Repository(DatabaseContext.Instance);
         await repository.AddUser(user);
         return user;
     }
