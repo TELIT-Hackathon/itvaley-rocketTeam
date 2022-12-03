@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ITags } from 'src/app/Interfaces/tags';
+import { ITags } from 'src/app/Interfaces/Tags';
 
 @Component({
   selector: 'app-recent-tags',

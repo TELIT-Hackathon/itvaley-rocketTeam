@@ -1,4 +1,4 @@
-.container{
+.container {
   max-width: 95%;
   display: grid;
   grid-template-areas:
@@ -7,15 +7,19 @@
     "nav content tags";
 
 
-  .header{
+  .header {
     grid-area: header;
   }
 
-  .nav-bar{
+  .nav-bar {
     grid-area: nav;
   }
 
-  .content{
+  .content {
     grid-area: content;
+  }
+
+  .tags {
+    margin: auto;
   }
 }
