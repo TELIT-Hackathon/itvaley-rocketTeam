@@ -1,16 +1,16 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Observable} from "rxjs";
 import {IUser} from "../../Interfaces/User";
 import {AccountService} from "../../Services/account.service";
 import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit{
-
+export class HeaderComponent{
   currentUser$: Observable<IUser> | undefined
 
   constructor(private accountService: AccountService, private router: Router) {}

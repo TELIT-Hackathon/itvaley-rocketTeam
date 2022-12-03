@@ -11,24 +11,11 @@ import {RegisterComponent} from './account/register/register.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {CoreModule} from "./core/core.module";
 import {TextInputComponent} from "./account/text-input/text-input.component";
-
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from "@angular/common/http";
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-
-import { TextFieldModule } from '@angular/cdk/text-field';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatSelectModule } from "@angular/material/select";
-import { MatInputModule } from "@angular/material/input";
-
-import { CoreModule } from "./core/core.module";
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
-import { DetailedIssueComponent } from './detailed-issue/detailed-issue.component';
+import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatInputModule} from "@angular/material/input";
+import {DetailedIssueComponent} from './detailed-issue/detailed-issue.component';
 
 
 @NgModule({
@@ -37,14 +24,13 @@ import { DetailedIssueComponent } from './detailed-issue/detailed-issue.componen
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    TextInputComponent
+    TextInputComponent,
     DetailedIssueComponent,
-    DetailedIssueComponent
+
   ],
   imports: [
     BrowserModule,
     TextFieldModule,
-    BrowserAnimationsModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
@@ -52,8 +38,6 @@ import { DetailedIssueComponent } from './detailed-issue/detailed-issue.componen
     HttpClientModule,
     ReactiveFormsModule,
     CoreModule,
-    AppRoutingModule
-    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [],

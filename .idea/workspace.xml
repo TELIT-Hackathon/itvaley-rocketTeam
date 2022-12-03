@@ -2,132 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06365832-52e0-4517-8f4d-e99bfe56cf35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/Interfaces/Tags.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/recent-tags/recent-tags.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/recent-tags/recent-tags.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/recent-tags/recent-tags.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/recent-tags/recent-tags.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/detailed-issue/detailed-issue.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/detailed-issue/detailed-issue.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/detailed-issue/detailed-issue.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/detailed-issue/detailed-issue.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/assets/images/pokemon-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/assets/images/pokemons/charmander.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/.config/dotnet-tools.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Context/DatabaseContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Database.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Entities/Issue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Entities/Tag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Entities/UserCredential.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Entities/UserDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Migrations/20221203210252_firstMigration.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Migrations/20221203210252_firstMigration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Migrations/DatabaseContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/Repositories/Repository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/bin/Debug/net6.0/Database.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/bin/Debug/net6.0/Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/bin/Debug/net6.0/Database.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/bin/Debug/net6.0/Database.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Database.csproj.EntityFrameworkCore.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Database.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Database.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Database.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/Database.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/ref/Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/Debug/net6.0/refint/Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Database/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/Controllers/test.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/BouncyCastle.Crypto.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Database.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Database.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Google.Protobuf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/K4os.Compression.LZ4.Streams.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/K4os.Compression.LZ4.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/K4os.Hash.xxHash.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Microsoft.OpenApi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/MySql.Data.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/MySql.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Server.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Server.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Server.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Server.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Server.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/System.Security.Permissions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/ZstdNet.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/bin/Debug/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/ref/Server.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/refint/Server.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/obj/staticwebassets.pack.sentinel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/Server.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Server/Server.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Debug/net6.0/Server.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/Server.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Server/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +70,7 @@
       <workItem from="1670077058192" duration="2161000" />
       <workItem from="1670085784955" duration="6899000" />
       <workItem from="1670094187846" duration="6880000" />
-      <workItem from="1670101839721" duration="673000" />
+      <workItem from="1670101839721" duration="1716000" />
     </task>
     <servers />
   </component>
