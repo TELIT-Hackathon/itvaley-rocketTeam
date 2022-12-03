@@ -1,6 +1,6 @@
 using Database.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+
 
 namespace Database.Context;
 
@@ -8,6 +8,8 @@ public class DatabaseContext : DbContext
 {
     public DbSet<UserCredential> UserCredentials { get; set; } = null!;
     public DbSet<UserDetail> UserDetails { get; set; } = null!;
+    public DbSet<Issue> Issues { get; set; } = null!;
+    public DbSet<Tag> Tags { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
