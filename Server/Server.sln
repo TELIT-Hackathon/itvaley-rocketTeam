@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server.csproj", "{62922928-1EB3-4739-85CA-16597FD8E203}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "..\Database\Database.csproj", "{2BC6E992-FF94-46CF-AA33-6D1315812A26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{62922928-1EB3-4739-85CA-16597FD8E203}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62922928-1EB3-4739-85CA-16597FD8E203}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62922928-1EB3-4739-85CA-16597FD8E203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC6E992-FF94-46CF-AA33-6D1315812A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC6E992-FF94-46CF-AA33-6D1315812A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC6E992-FF94-46CF-AA33-6D1315812A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC6E992-FF94-46CF-AA33-6D1315812A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
