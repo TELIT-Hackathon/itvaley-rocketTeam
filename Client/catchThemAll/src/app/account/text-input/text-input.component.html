@@ -1,0 +1,23 @@
+<div>
+    <input
+        [ngClass]="(controlDir && controlDir.control && controlDir.control.touched) ? !controlDir.control.valid ? 'is-invalid' : 'is-valid' : null"
+        [type]="type" (input)="onChange($any($event.target).value)" (blur)="onTouched()" class="form-control" id="{{label}}"
+        #input placeholder="{{label}}">
+
+    <label for="{{label}}">{{label}}</label>
+    <div class="invalid-feedback"
+        *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.touched)">
+        <span class="error-message" *ngIf="controlDir.control.errors?.required">{{label}} is required.</span>
+        <span class="error-message" *ngIf="type === 'text' && controlDir.control.errors?.minlength">{{label}} is not
+            long enough.</span>
+        <span class="error-message" *ngIf="type === 'email' && controlDir.control.errors?.pattern">Invalid email
+            address.</span>
+        <span class="error-message" *ngIf="controlDir.control.hasError('matching')">Passwords must match.</span>
+        <span class="error-message" *ngIf="type === 'password' && controlDir.control.errors">Password must have 1 upper,
+            1 lower, 1 number, 1 non alphanumeric character.</span>
+    </div>
+
+    <!-- <div class="invalid-feedback d-block" *ngIf="(controlDir && controlDir.control && !controlDir.control.valid && controlDir.control.dirty)">
+        <span *ngIf="controlDir.control.errors?.emailExists">Email address is in use</span>
+    </div> -->
+</div>

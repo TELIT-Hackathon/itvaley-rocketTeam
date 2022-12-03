@@ -1,0 +1,30 @@
+input {
+    background-color: transparent;
+    color: white;   
+    outline: none;
+    display: inline-block;
+    color: white; 
+    border: 1px solid #656565;
+    width: 90%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 15px;
+}
+
+input:focus{
+    background-color: transparent;
+    color: white;
+}
+
+label {
+    display: none;
+}
+
+.error-message {
+    margin-top: -12px;
+    margin-left: 40px;
+    position: relative;
+    display: list-item;
+    padding-bottom: 6px;
+}
