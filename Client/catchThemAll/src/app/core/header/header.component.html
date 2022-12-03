@@ -1,9 +1,23 @@
 <!--div holding content-->
 <div>
-  <ul>
-    <li>Home</li>
-    <li>Messages</li>
-    <li>Workshops</li>
-    <li>Projects</li>
-  </ul>
+  <div> <!--div for left top corner items-->
+    <h2>CatchThemAll</h2>
+    <h3>For Students CUSTOM VARIABLE IN TS</h3>
+  </div>
+
+  <div> <!--div for search bar-->
+    <input type="text" placeholder="Search..">
+  </div>
+
+  <div>
+    <div  *ngIf="(currentUser$ | async ) !== null">>
+      <app-profile-nav></app-profile-nav>
+    </div>
+    <!--  OR  -->
+    <div *ngIf="(currentUser$ | async ) === null">
+      <button (click)="toLogin()">Log in</button>
+      <button (click)="toRegister()">Register</button>
+    </div>
+  </div>
+
 </div>

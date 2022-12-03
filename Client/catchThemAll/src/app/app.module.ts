@@ -6,9 +6,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './home/home.component';
+import {LoginComponent} from './account/login/login.component';
+import {RegisterComponent} from './account/register/register.component';
+import {ReactiveFormsModule} from "@angular/forms";
 import {CoreModule} from "./core/core.module";
-import { LoginComponent } from './account/login/login.component';
-import { RegisterComponent } from './account/register/register.component';
+import {TextInputComponent} from "./account/text-input/text-input.component";
+
 
 @NgModule({
   declarations: [
@@ -16,15 +19,18 @@ import { RegisterComponent } from './account/register/register.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    TextInputComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     CoreModule,
-    HttpClientModule
+    AppRoutingModule
   ],
   providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
