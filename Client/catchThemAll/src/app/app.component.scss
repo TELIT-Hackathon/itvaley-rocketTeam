@@ -1,0 +1,21 @@
+.container{
+  max-width: 95%;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav content tags"
+    "nav content tags";
+
+
+  .header{
+    grid-area: header;
+  }
+
+  .nav-bar{
+    grid-area: nav;
+  }
+
+  .content{
+    grid-area: content;
+  }
+}
