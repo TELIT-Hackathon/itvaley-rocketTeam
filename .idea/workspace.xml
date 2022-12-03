@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="06365832-52e0-4517-8f4d-e99bfe56cf35" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +29,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IPFuLnQQ0dMheTqBb5MDOTRlHk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,11 +41,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/richa/Desktop/hackaton/Client/catchThemAll/src/app/account&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\richa\\Desktop\\hackaton\\Client\\catchThemAll\\node_modules\\typescript\\lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalResources&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\Desktop\hackaton\Client\catchThemAll\src\app\account" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\richa\Desktop\hackaton\Client\catchThemAll\src\app\core" />
+      <recent name="C:\Users\richa\Desktop\hackaton\Client\catchThemAll\src\app\shared" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,7 +68,9 @@
       <workItem from="1670075535435" duration="40000" />
       <workItem from="1670075614336" duration="1131000" />
       <workItem from="1670077058192" duration="2161000" />
-      <workItem from="1670085784955" duration="939000" />
+      <workItem from="1670085784955" duration="6899000" />
+      <workItem from="1670094187846" duration="6880000" />
+      <workItem from="1670101839721" duration="1716000" />
     </task>
     <servers />
   </component>

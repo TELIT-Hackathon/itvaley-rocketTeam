@@ -1,10 +1,56 @@
-ul{
-  padding: 0;
-  list-style: none;
+
+.left,.center, .right, .profile-pic {
+  display: inline;
+}
+
+h2, h3{
+  margin: 0;
+}
+
+h2{
   font-size: 20px;
   font-weight: 600;
-  li{
-    padding: 20px 0px;
-    cursor: pointer;
+}
+
+h3{
+  font-size: 15px;
+}
+
+.content, .profile{
+  display: flex;
+}
+
+.content{
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
+.left{
+  display: flex;
+  .logo{
+    display: inline;
   }
+  .right{
+    display: inline;
+    h2{
+      display: block;
+    }
+    h3{
+      display: block;
+    }
+  }
+
+}
+.profile{
+
+  .profile-right{
+    .name{
+      display: block;
+    }
+
+    .username{
+      display: block;
+    }
+  }
+
 }
