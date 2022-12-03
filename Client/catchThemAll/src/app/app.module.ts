@@ -5,18 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './core/nav-bar/nav-bar.component';
+
+import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent
   ],
   imports: [
     BrowserModule,
+    TextFieldModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
