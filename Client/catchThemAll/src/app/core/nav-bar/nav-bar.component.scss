@@ -1,0 +1,42 @@
+.left,.center, .right, .profile-pic {
+  display: inline;
+}
+
+.content, .profile{
+  display: flex;
+}
+
+.content{
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
+.left{
+  display: flex;
+  .logo{
+    display: inline;
+  }
+  .right{
+    display: inline;
+    h2{
+      display: block;
+    }
+    h3{
+      display: block;
+    }
+  }
+
+}
+.profile{
+
+  .profile-right{
+    .name{
+      display: block;
+    }
+
+    .username{
+      display: block;
+    }
+  }
+
+}
