@@ -6,23 +6,11 @@ namespace Database.Context;
 
 public class DatabaseContext : DbContext
 {
-    public DatabaseContext() { }
-    
-    protected readonly IConfiguration Configuration;
-
     public DbSet<UserCredential> UserCredentials { get; set; } = null!;
     public DbSet<UserDetail> UserDetails { get; set; } = null!;
-    
 
-    public DatabaseContext(IConfiguration configuration)
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        Configuration = configuration;
-    }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder options)
-    {
-        // connect to mysql with connection string from app settings
-        var connectionString = Configuration.GetConnectionString("WebApiDatabase");
-        options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        optionsBuilder.UseMySQL("server=localhost;port=3306;database=rocket;uid=root;pwd=1234");
     }
 }

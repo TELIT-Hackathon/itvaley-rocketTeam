@@ -12,3 +12,17 @@ C:\Work\Hackathon\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.pdb
 C:\Work\Hackathon\IT Valley Team Rocket\Database\obj\Debug\net6.0\ref\Database.dll
 C:\Work\Hackathon\IT Valley Team Rocket\Database\bin\Debug\net6.0\Database.runtimeconfig.json
 C:\Work\Hackathon\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.genruntimeconfig.cache
+C:\IT Valley Team Rocket\Database\bin\Debug\net6.0\Database.deps.json
+C:\IT Valley Team Rocket\Database\bin\Debug\net6.0\Database.runtimeconfig.json
+C:\IT Valley Team Rocket\Database\bin\Debug\net6.0\Database.dll
+C:\IT Valley Team Rocket\Database\bin\Debug\net6.0\Database.pdb
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.csproj.AssemblyReference.cache
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.AssemblyInfoInputs.cache
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.AssemblyInfo.cs
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.csproj.CoreCompileInputs.cache
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.dll
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\refint\Database.dll
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.pdb
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\Database.genruntimeconfig.cache
+C:\IT Valley Team Rocket\Database\obj\Debug\net6.0\ref\Database.dll
