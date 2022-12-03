@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IT Valley Team Rocket\\Server\\Server.csproj": {}
+    "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\IT Valley Team Rocket\\Database\\Database.csproj": {
+    "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IT Valley Team Rocket\\Database\\Database.csproj",
+        "projectUniqueName": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\Database.csproj",
         "projectName": "Database",
-        "projectPath": "C:\\IT Valley Team Rocket\\Database\\Database.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\IT Valley Team Rocket\\Database\\obj\\",
+        "projectPath": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\Database.csproj",
+        "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -77,17 +77,17 @@
         }
       }
     },
-    "C:\\IT Valley Team Rocket\\Server\\Server.csproj": {
+    "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IT Valley Team Rocket\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\IT Valley Team Rocket\\Server\\Server.csproj",
-        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\IT Valley Team Rocket\\Server\\obj\\",
+        "projectPath": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+        "outputPath": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -99,8 +99,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\IT Valley Team Rocket\\Database\\Database.csproj": {
-                "projectPath": "C:\\IT Valley Team Rocket\\Database\\Database.csproj"
+              "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\Database.csproj": {
+                "projectPath": "C:\\Work\\Hackathon\\IT Valley Team Rocket\\Database\\Database.csproj"
               }
             }
           }

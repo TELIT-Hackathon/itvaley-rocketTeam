@@ -5,19 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e76becaf-1eb7-472b-ac00-1063bce22ee2" name="Changes" comment="&quot;added database connection&quot;">
+      <change afterPath="$PROJECT_DIR$/../Database/Repositories/TagsRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Controllers/TagsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dtos/TagsDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mappers/TagsMapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/Context/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/Context/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Entities/UserDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/Entities/UserDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/20221203194255_firstMigration.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/20221203194255_firstMigration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Database.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Database.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Database.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Database.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/ref/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/ref/Database.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/refint/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/refint/Database.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Database/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Database.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Database.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Database.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net6.0/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net6.0/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/Server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/Server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/ref/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Server.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/refint/Server.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Server.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Server.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Server.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Server.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +64,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Server">
     <configuration name="Database" type="DotNetProject" factoryName=".NET Project" temporary="true">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.exe" />
@@ -109,6 +140,7 @@
       <updated>1670079080961</updated>
       <workItem from="1670079089839" duration="10914000" />
       <workItem from="1670095393590" duration="5786000" />
+      <workItem from="1670103081524" duration="5901000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;added database connection&quot;">
       <created>1670098732616</created>
@@ -131,7 +163,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
