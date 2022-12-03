@@ -1,0 +1,23 @@
+.tags {
+    max-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tags-item {
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 5px;
+    background-color: gray;
+    width: 120px;
+    color: white;
+}
+
+.tag-count {
+    float: right;
+}
+
+tag-name {
+    float: left;
+}
