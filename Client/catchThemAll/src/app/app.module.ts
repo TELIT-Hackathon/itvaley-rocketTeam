@@ -17,7 +17,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {DetailedIssueComponent} from './detailed-issue/detailed-issue.component';
 import { WorkshopsComponent } from './workshops/workshops.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -40,8 +40,9 @@ import { WorkshopsComponent } from './workshops/workshops.component';
     HttpClientModule,
     ReactiveFormsModule,
     CoreModule,
-    AppRoutingModule,
     FormsModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   exports: [],

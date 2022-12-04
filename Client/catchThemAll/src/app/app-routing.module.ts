@@ -6,6 +6,7 @@ import {ProfileNavComponent} from "./core/profile-nav/profile-nav.component";
 import {LoginComponent} from "./account/login/login.component";
 import {RegisterComponent} from "./account/register/register.component";
 import {WorkshopsComponent} from "./workshops/workshops.component";
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,7 +14,9 @@ const routes: Routes = [
   { path: 'profile-nav', component: ProfileNavComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'workshops', component: WorkshopsComponent}
+  { path: 'workshops', component: WorkshopsComponent},
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

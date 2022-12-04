@@ -10,6 +10,7 @@
   </div>
 
   <div class="center"> <!--div for search bar-->
+    <i class="bi bi-search"></i>
     <input type="text" placeholder="Search..">
   </div>
 
@@ -19,8 +20,8 @@
     </div>
 
     <div *ngIf="(currentUser$ | async ) === null">
-      <button (click)="toLogin()">Log in</button>
-      <button (click)="toRegister()">Register</button>
+      <button class="btn btn-login" (click)="toLogin()">Log in</button>
+      <button class="btn btn-reg" (click)="toRegister()">Register</button>
     </div>
 
 </div>

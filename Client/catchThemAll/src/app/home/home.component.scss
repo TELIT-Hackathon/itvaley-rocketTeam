@@ -1,69 +1,73 @@
-.add-post{
+.add-post {
   display: flex;
-  padding: 15px 15px 5px;
+  margin-bottom: 50px;
+  padding: 15px 15px 10px;
   background-color: white;
   box-shadow: 10px 5px 5px grey;
   border-radius: 22px;
 
-  .left-side{
-
-    .profile-pic{
+  .left-side {
+    .profile-pic {
+      border: 3px solid #333333;
       border-radius: 50%;
       width: 60px;
       height: 60px;
     }
-
-    .pic-student{
-      border: 3px solid #41CF8B;
-    }
   }
 
-  .right-side{
+  .right-side {
     width: 100%;
     padding-left: 20px;
-    form{
+
+    form {
 
 
       textarea {
+        width: 100%;
+        max-width: 100%;
         padding-left: 0;
         display: block;
         border: none;
         outline: none;
-        resize: none;
 
       }
     }
 
-    .add-post-title{
+    .add-post-title {
       font-weight: 500;
       font-size: 20px;
       height: 35px;
     }
 
-    .add-post-text{
+    .add-post-text {
       font-size: 14px;
-      height: 25px;
+      height: 75px;
     }
 
-    .others{
+    .others {
+      margin-top: 7px;
       display: flex;
       height: fit-content;
       align-items: center;
-      .bi{
+
+      .bi {
         font-size: 25px;
+        margin-right: 5px;
         cursor: pointer;
       }
-      .btn-post{
+
+      .btn-post {
         font-size: 20px;
-        border:none;
-        background-color: #ED1B1B;
+        border: none;
+        background-color: #ED1B24;
         color: white;
         border-radius: 15px;
         width: 110px;
         height: 37.5px;
         margin-left: auto;
       }
-      .add-tags{
+
+      .add-tags {
         height: fit-content;
         display: inline-block;
         border: none;
@@ -78,7 +82,108 @@
   }
 }
 
+.post {
+  display: flex;
+  margin-top: 20px;
+  padding: 15px 15px 10px;
+  background-color: white;
+  box-shadow: 10px 5px 5px grey;
+  border-radius: 22px;
 
+  .left-side {
+    .profile-pic {
+      border: 3px solid #333333;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+    }
+
+    .pic-student {
+      border-color: #41CF8B;
+    }
+
+    .pic-teacher {
+      border-color: #41ADCF;
+    }
+
+    .pic-expert {
+      border-color: #ED1B1B;
+    }
+  }
+
+  .right-side {
+    width: 100%;
+    padding-left: 20px;
+
+    .username{
+      display: inline-block;
+    }
+    .date{
+      float: right;
+      display: inline-block;
+      font-size: 14px;
+    }
+    .role {
+      font-size: 15px;
+
+    }
+    .bi{
+
+      margin-top: -9px;
+      margin-left: 8px;
+      float: right;
+      font-size: 25px;
+
+    }
+    .title {
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .id {
+      display: inline-block;
+    }
+
+    .text {
+      color: #626262;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .others {
+      margin-top: 7px;
+      display: flex;
+      height: fit-content;
+      align-items: center;
+
+      .tag {
+        font-size: 12px;
+        background: #929292;
+        color: white;
+        width: fit-content;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+
+      .btn-show {
+        font-size: 16px;
+        border: none;
+        background-color: #ED1B24;
+        color: white;
+        border-radius: 13px;
+        width: 130px;
+        height: 30px;
+        margin-left: auto;
+      }
+    }
+
+  }
+}
+
+
+h6 {
+  margin-bottom: 0;
+}
 
 
 
