@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="container">
+  <div class="row">
+    
+    <div class="col" id="grid-container">
+      <a class="close-link" href=""> <img class="close-img" src="../../../../assets/images/close.png" alt=""> </a>
+      <h1 class="header-text">Login</h1>
+
+      <form class="form-grid-element" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+
+          <div class="form-group">
+            <app-text-input class="text-input" [type]="'email'" [label]="'Email address'" formControlName="email">
+            </app-text-input>
+          </div>
+
+          <div class="form-group">
+            <app-text-input [label]="'Password'" [type]="'password'" formControlName="password"></app-text-input>
+          </div>
+          <!--END OF FORM-->
+        </div>
+
+        <div>
+          <button [disabled]="loginForm.invalid" type="submit" class="login-button">Login</button>
+        </div>
+
+      </form>
+      <!--END OF FORM BLOCK-->
+    </div>
+  </div>
+</div>

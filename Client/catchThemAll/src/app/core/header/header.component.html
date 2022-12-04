@@ -1,9 +1,28 @@
 <!--div holding content-->
-<div>
-  <ul>
-    <li>Home</li>
-    <li>Messages</li>
-    <li>Workshops</li>
-    <li>Projects</li>
-  </ul>
+<div class="content">
+
+  <div class="left" > <!--div for left top corner items-->
+    <img class="logo" src="../../assets/images/pokemon-logo.png" alt="Logo" height="50px" >
+    <div class="right">
+      <h2>CatchThemAll</h2>
+      <h3>For Students</h3>
+    </div>
+  </div>
+
+
+  <div class="center"> <!--div for search bar-->
+    <input type="text" placeholder="Search..">
+  </div>
+
+  <div class="right">
+    <div class="profile" *ngIf="(currentUser$ | async ) !== null"> <!--ONLY ACTIVE USER, LOGGED IN  div for right top corner items, account, profile photo etc-->
+      <app-profile-nav></app-profile-nav>
+    </div>
+
+    <div *ngIf="(currentUser$ | async ) === null">
+      <button class="btn btn-login" (click)="toLogin()">Log in</button>
+      <button class="btn btn-reg" (click)="toRegister()">Register</button>
+    </div>
+
+</div>
 </div>
