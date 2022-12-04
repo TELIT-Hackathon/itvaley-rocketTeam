@@ -229,5 +229,13 @@ public class IssueController : ControllerBase
         
         return issuesByName ;
     }
+
+    [HttpPost(Name = "setIsClosed")]
+    public async Task<int> SetIsClosed(int issueId, bool isSolved)
+    {
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var issue = await repository.GetIssueById(issueId);
+        return await repository.SetIssueIsSolved(issue, isSolved);
+    }
     
 }
