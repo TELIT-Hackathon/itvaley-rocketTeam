@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
-import {IUser} from "../../Interfaces/User";
-import {AccountService} from "../../Services/account.service";
+import { Component, OnInit } from '@angular/core';
+import { Observable } from "rxjs";
+import { IUser } from "../../Interfaces/User";
+import { AccountService } from "../../Services/account.service";
 
 @Component({
   selector: 'app-profile-nav',
@@ -17,8 +17,10 @@ export class ProfileNavComponent implements OnInit {
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.returnUser();
+    this.accountService.loadAccount();
     console.log(this.currentUser$)
+    this.username = localStorage.getItem("username")
+    this.role = localStorage.getItem("role")
   }
 
   logout() {
@@ -30,7 +32,7 @@ export class ProfileNavComponent implements OnInit {
   }
 
   getUserName() {
-    return <string>this.currentUser$?.userName;
+    return <string>this.currentUser$?.username;
   }
 
 }
