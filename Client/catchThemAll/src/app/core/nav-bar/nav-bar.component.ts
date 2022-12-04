@@ -38,4 +38,8 @@ export class NavBarComponent {
   logout(){
 
   }
+
+  toWorkshops() {
+    this.router.navigateByUrl('/workshops');
+  }
 }

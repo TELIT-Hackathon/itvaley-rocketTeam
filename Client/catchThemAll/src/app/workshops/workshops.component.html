@@ -1,7 +1,70 @@
 <div class="container">
-  <h3>Workshops</h3>
+  <br>
 
   <div *ngIf="Role == 'Expert'">
-    <h4>List new workshop.</h4>
+    <div class="add-post">
+      <div class="left-side">
+        <img class="profile-pic " src="../../assets/images/pokemons/gengar.png" alt="Profile picture">
+      </div>
+      <div class="right-side">
+        <h4 class="creat-new">Create new workshop</h4>
+        <form class="add-post-form">
+          <textarea class="add-post-title" placeholder="Add title"></textarea>
+          <textarea class="add-post-text" placeholder="Text here"></textarea>
+          <input class="group-size" type="text" placeholder="Group Size">
+        </form>
+        <div class="others">
+          <i class="bi bi-link-45deg"></i>
+          <input class="add-tags" type="text" placeholder="Add tags">
+          <button class="btn-post">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Listed workshops</h3>
+
+  <div class="post">
+    <div class="left-side">
+      <img class="profile-pic" src="../../assets/images/pokemons/charmander.png" alt="Profile picture">
+    </div>
+    <div class="right-side">
+      <h6 class="username">@prof_x</h6>
+      <!--    <i class="bi bi-patch-exclamation-fill"></i>-->
+      <i class="bi bi-patch-check-fill"></i>
+      <h6 class="date">4.12.2022</h6>
+      <h6 class="role">Role: Expert</h6>
+      <h3 class="title">Intermediate React Workshop</h3>
+      <h6 class="id">#2983</h6>
+      <p class="text">Hi, I am starting new React workshop for 20 students, feel free to join!</p>
+      <h6 class="capacity">Capacity: 2 / 20</h6>
+      <div class="others">
+        <div class="tag">React</div>
+        <div class="tag">Advanced</div>
+        <button class="btn-show">Expand</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="post">
+    <div class="left-side">
+      <img class="profile-pic" src="../../assets/images/pokemons/blast.png" alt="Profile picture">
+    </div>
+    <div class="right-side">
+      <h6 class="username">@john_m</h6>
+      <!--    <i class="bi bi-patch-exclamation-fill"></i>-->
+      <i class="bi bi-patch-check-fill"></i>
+      <h6 class="date">1.12.2022</h6>
+      <h6 class="role">Role: Expert</h6>
+      <h3 class="title">Java for beginners</h3>
+      <h6 class="id">#2983</h6>
+      <p class="text">Hello, I am opening Java course for 30 students, don't hesitate to join to join!</p>
+      <h6 class="capacity">Capacity: 2 / 20</h6>
+      <div class="others">
+        <div class="tag">React</div>
+        <div class="tag">Advanced</div>
+        <button class="btn-show">Expand</button>
+      </div>
+    </div>
   </div>
 </div>
