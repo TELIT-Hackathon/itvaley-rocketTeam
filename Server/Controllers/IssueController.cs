@@ -1,3 +1,4 @@
+using System.Globalization;
 using Database.Context;
 using Database.Entities;
 using Database.Repositories;
@@ -35,10 +36,11 @@ public class IssueController : ControllerBase
                         });
                     }
                 }
-                
+
+                string pattern = "dd-mm-yyyy";
                 var dbIssueDto = new DbIssueDto()
                 {
-                    Date = issue.Date,
+                    Date = DateTime.Parse(issue.Date.ToString(pattern)),
                     Tags = tagNameDtos,
                     Text = issue.Text,
                     Title = issue.Title,
@@ -62,13 +64,11 @@ public class IssueController : ControllerBase
         
         
         //var doka = await tagsRepository.GetTags();
-
         
-
         var newIssue = new Issue()
         {
             Title = issueDto.Title,
-            Date = DateTime.Now,
+            Date = DateTime.Now.Date,
             IsSolved = false,
             Text = issueDto.Text,
             Username= issueDto.Username
