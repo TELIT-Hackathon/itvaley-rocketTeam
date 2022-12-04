@@ -1,6 +1,8 @@
-namespace Database.Entities;
+using Database.Entities;
 
-public class Issue
+namespace Server.Dtos;
+
+public class DbIssueDto
 {
     public int IssueId { get; set; }
     public string Title { get; set; } = null!;
