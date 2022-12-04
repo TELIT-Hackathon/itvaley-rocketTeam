@@ -19,10 +19,10 @@
       <app-profile-nav></app-profile-nav>
     </div>
     <app-profile-nav></app-profile-nav>
-<!--    <div *ngIf="(currentUser$ | async ) === null">-->
-<!--      <button class="btn btn-login" (click)="toLogin()">Log in</button>-->
-<!--      <button class="btn btn-reg" (click)="toRegister()">Register</button>-->
-<!--    </div>-->
+    <div *ngIf="(currentUser$ | async ) === null">
+      <button class="btn btn-login" (click)="toLogin()">Log in</button>
+      <button class="btn btn-reg" (click)="toRegister()">Register</button>
+    </div>
 
 </div>
 </div>
