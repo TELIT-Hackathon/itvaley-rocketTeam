@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col" id="grid-container">
+      <h1 class="header-text">Register</h1>
+
+      <form class="form-grid-element" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div>
+
+          <div class="form-group">
+            <app-text-input class="text-input" [type]="'text'" [label]="'Username'" formControlName="username"></app-text-input>
+          </div>
+
+          <div class="form-group">
+            <app-text-input class="text-input" [type]="'email'"  [label]="'Email address'" formControlName="email"></app-text-input>
+          </div>
+
+          <div class="form-group">
+            <app-text-input [label]="'Password'" [type]="'password'" formControlName="password"></app-text-input>
+          </div>
+
+          <div class="form-group">
+            <app-text-input [label]="'Confirm Password'" [type]="'password'" formControlName="confirmPassword"></app-text-input>
+          </div>
+          <!--END OF FORM-->
+        </div>
+
+        <div>
+          <button class="register-button">Register</button>
+        </div>
+      </form>  <!--END OF FORM BLOCK-->
+
+    </div>
+  </div>
+</div>
