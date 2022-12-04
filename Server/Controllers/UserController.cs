@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Server.Dtos;
+using Server.Mappers;
 
 namespace Server.Controllers;
 
@@ -8,8 +9,14 @@ namespace Server.Controllers;
 public class UserController: ControllerBase
 {
     [HttpPost(Name = "register")]
-    public Task<RegisterDto> Register(UserDto userDto)
+    public async Task<UserDto> Register(RegisterDto registerDto)
     {
-        
+        return await RegisterMapper.Register(registerDto);
+    }
+    
+    [HttpPost(Name = "login")]
+    public async Task<UserDto?> Login (LoginDto loginDto)
+    {
+        return await RegisterMapper.Login(loginDto);
     }
 }
