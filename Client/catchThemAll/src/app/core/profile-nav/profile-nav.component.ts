@@ -11,28 +11,30 @@ import {AccountService} from "../../Services/account.service";
 export class ProfileNavComponent implements OnInit {
   currentUser$: Observable<IUser> | undefined
 
-  profileEmail: string | undefined;
-  username: string | undefined;
+  username: any;
+  role: any;
 
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
     this.currentUser$ = this.accountService.currentUser$;
+    this.username = this.getUserName();
+    this.role = this.getRole();
   }
 
   logout() {
     this.accountService.logout();
   }
 
-  getEmail(): void {
+  getRole() {
     this.accountService.loadAccount().subscribe((response: IUser) => {
-      this.profileEmail = response.email;
+     return response.role;
     });
   }
 
   getUserName() {
     this.accountService.loadAccount().subscribe((response: IUser) =>{
-      this.username = response.userName;
+      return response.userName;
     });
   }
 
