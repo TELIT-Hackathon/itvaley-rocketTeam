@@ -12,7 +12,7 @@ namespace Server.Controllers;
 public class TagsController: ControllerBase
 {
     [HttpGet(Name = "get")]
-    public async Task<TagsDto> Get()
+    public async Task<List<TagDto>> Get()
     {
         return await TagsMapper.MapTagsDto();
     }

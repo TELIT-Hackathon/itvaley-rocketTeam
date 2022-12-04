@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, EMPTY, map, Observable } from 'rxjs';
-import { Tags } from '../Interfaces/tags';
+import { Tags } from '../Interfaces/Tags';
 
 @Injectable({
   providedIn: 'root'
@@ -54,5 +54,5 @@ export class TagsService {
       "count": 0
     }
   ]
-} 
+}
 */

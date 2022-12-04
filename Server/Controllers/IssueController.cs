@@ -11,15 +11,30 @@ namespace Server.Controllers;
 public class IssueController : ControllerBase
 {
     [HttpGet(Name = "getIssues")]
-    public async Task<List<Issue>> GetAllIssue()
+    public async Task<List<DbIssueDto>> GetAllIssue()
     {
         var repository = new IssueRepository(DatabaseContext.Instance);
-
-        return await repository.GetIssues();
+        var issues = await repository.GetIssues();
+        var dtoIssues = new List<DbIssueDto>();
+            issues.ForEach(issue =>
+            {
+                var dbIssueDto = new DbIssueDto()
+                {
+                    Date = issue.Date,
+                    Tags = issue.Tags,
+                    Text = issue.Text,
+                    Title = issue.Text,
+                    IsSolved = issue.IsSolved,
+                    IssueId = issue.IssueId,
+                    UserDetail = issue.UserDetail
+                };
+                dtoIssues.Add(dbIssueDto);
+            });
+        return dtoIssues;
     }
     
     [HttpPost(Name = "addIssue")]
-    public async void AddIssue(IssueDto issueDto)
+    public async Task AddIssue(IssueDto issueDto)
     {
         var issueRepository = new IssueRepository(DatabaseContext.Instance);
         var tagsRepository = new TagsRepository(DatabaseContext.Instance);

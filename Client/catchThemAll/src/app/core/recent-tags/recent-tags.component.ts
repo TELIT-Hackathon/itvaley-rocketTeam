@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ITags } from 'src/app/Interfaces/tags';
+import { Observable } from 'rxjs';
+import { ITags, Tags } from 'src/app/Interfaces/Tags';
+import { TagsService } from 'src/app/Services/tags.service';
 
 @Component({
   selector: 'app-recent-tags',
@@ -16,9 +18,20 @@ export class RecentTagsComponent {
   LuaTag: ITags = { name: "Lua", count: this.thousandFormater(108000) }
 
   allTags = [this.pythonTag, this.javaTag, this.LuaTag]
-  constructor() { }
+
+  tags: Tags[] = []
+  constructor(private tagsService: TagsService) { }
 
   ngOnInit(): void {
+    const pipeEnd: Observable<Tags[]> = this.tagsService.getTagsList()
+    //Catching functions from end pipe for async data, compoment still generate if doesnt get datas
+    pipeEnd.subscribe({
+      next: tagsArray => this.tags = tagsArray,
+      error: error => console.error(error),
+      complete: () => console.log("Pipe closed")
+
+    })
+
   }
 
   //if count in tag is over 1 000 it will change on 1k 
