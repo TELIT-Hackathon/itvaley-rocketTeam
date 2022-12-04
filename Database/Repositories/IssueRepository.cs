@@ -29,7 +29,25 @@ public class IssueRepository
     
     public async Task<List<Issue>> GetIssues()
     {
-        return  _context.Issues.ToList();
+        return  await  _context.Issues.ToListAsync();
+    }
+
+    public async Task<Issue> GetIssueById(int id)
+    {
+        return await _context.Issues.FirstOrDefaultAsync(p => p.IssueId == id);
+    }
+    
+    public async Task<int> SetIssueIsSolved(Issue issue, bool isSolved)
+    {
+        issue.IsSolved = isSolved;
+        _context.Set<Issue>().Update(issue);
+        var change = await _context.SaveChangesAsync();
+
+        if (change > 0)
+        {
+            return change;
+        }
+        return 0;
     }
     
 }
