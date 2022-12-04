@@ -1,8 +1,9 @@
-import {CdkTextareaAutosize} from '@angular/cdk/text-field';
-import {Component, NgZone, ViewChild, ViewEncapsulation} from '@angular/core';
-import {take} from 'rxjs/operators';
+
+import {Component, ViewEncapsulation} from '@angular/core';
 import {IssuesService} from "../Services/issues.service";
-import {Issue, Tags, UserDetail} from "../Interfaces/Issues";
+import {Issue, Tags} from "../Interfaces/Issues";
+import {UserInfo} from "../Interfaces/UserInfo";
+import {IssuesData} from "../Interfaces/IssuesData";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,39 +11,46 @@ import {Issue, Tags, UserDetail} from "../Interfaces/Issues";
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
-  issuesList : Issue [] = [];
+  newIssue = {} as IssuesData;
+  issuesList : IssuesData [] = [];
   tagsList: Tags [] = [];
-  userDetail: UserDetail [] = [];
+  public role : string = "";
 
-  constructor(private _ngZone: NgZone, private issueService: IssuesService) {}
-  @ViewChild('autosize') autosize: CdkTextareaAutosize | undefined;
+  constructor(private issueService: IssuesService) {}
   ngOnInit(): void {
     this.getIssues();
 
   }
-  triggerResize() {
-    // Wait for changes to be applied, then trigger textarea resize.
-    this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize!.resizeToFitContent(true));
-  }
+
 
   getIssues(){
     this.issueService.getAllIssues().subscribe((response: Issue[]) =>{
       for(let i=0;i<response.length; i++){
-        let data = {} as Issue;
+        let data = {} as IssuesData;
+
         data.issueId = response[i].issueId;
         data.date = response[i].date;
         data.title = response[i].title;
         data.isSolved = response[i].isSolved;
-        let tagsData = data.tags;
-        for(let j=0; j<tagsData.length; j++){
-          let tags = {} as Tags;
-          tags.name = tagsData[j].name
-          this.tagsList.push(tags)
-        }
+        console.log(data.isSolved)
+        data.text = response[i].text;
+        data.username = response[i].username;
+        this.issueService.getUserInfo(response[i].username).subscribe((response: UserInfo) =>{
+          data.role = response.role;
+        });
+        data.tags = response[i].tags;
+
         this.issuesList.push(data);
 
-
       }
+      this.issuesList.sort((a, b) => (a.issueId> b.issueId ? -1 : 1));
     });
+
+  }
+
+  onSubmit(){
+    this.issueService.addIssues(this.newIssue).subscribe(n =>{
+      this.getIssues();
+    })
   }
 }

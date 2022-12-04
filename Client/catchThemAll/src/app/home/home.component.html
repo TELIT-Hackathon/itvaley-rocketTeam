@@ -1,37 +1,58 @@
-<div class="add-post">
+<form (ngSubmit)="onSubmit()" #formModel="ngForm">
+  <div class="add-post">
   <div class="left-side">
     <img class="profile-pic " src="../../assets/images/pokemons/charmander.png" alt="Profile picture">
   </div>
+
   <div class="right-side">
     <form class="add-post-form">
-      <textarea class="add-post-title" placeholder="Add title"></textarea>
-      <textarea class="add-post-text" placeholder="Text here"></textarea>
+      <textarea id="title" name="title" class="add-post-title" placeholder="Add title" [(ngModel)]="newIssue.title"
+                #titleModel="ngModel"></textarea>
+      <textarea id="text" name="text" class="add-post-text" placeholder="Text here"  [(ngModel)]="newIssue.text"
+                #textModel="ngModel"></textarea>
     </form>
     <div class="others">
       <i class="bi bi-card-image"></i>
       <i class="bi bi-link-45deg"></i>
-      <input class="add-tags" type="text" placeholder="Add tags">
-      <button class="btn-post">Post</button>
+      <input [(ngModel)]="newIssue.tags"
+             #tagsModel="ngModel" id="tags" name="tags" class="add-tags" type="text" placeholder="Add tags">
+      <button  type="submit" class="btn-post">Post</button>
     </div>
   </div>
-</div>
 
-<div class="post">
+</div>
+</form>
+<div class="post" *ngFor="let issue of issuesList">
   <div class="left-side">
+      <div *ngIf="issue.username == 'charmander'">
     <img class="profile-pic" src="../../assets/images/pokemons/charmander.png" alt="Profile picture">
+      </div>
+    <div *ngIf="issue.username == 'ash'">
+      <img class="profile-pic" src="../../assets/images/pokemons/ash.png" alt="Profile picture">
+    </div>
+    <div *ngIf="issue.username == 'pikachu'">
+      <img class="profile-pic" src="../../assets/images/pokemons/pikachu.jpg" alt="Profile picture">
+    </div>
   </div>
   <div class="right-side">
     <h6 class="username">@Username</h6>
 
-    <!--    <i class="bi bi-patch-exclamation-fill"></i>-->
-    <i class="bi bi-patch-check-fill"></i>
-    <h6 class="date">4.12.2022</h6>
-    <h6 class="role">Student</h6>
-    <h3 class="title">Example question</h3>
-    <h6 class="id">#HG65XY</h6>
-    <p class="text">Hello my computer have virus , somebody help me please :( ....</p>
+    <h6 class="date">{{issue.date}}</h6>
+    <div *ngIf="issue.username == 'charmander'">
+      <h6 class="role">Teacher</h6>
+    </div>
+    <div *ngIf="issue.username == 'ash'">
+      <h6 class="role">Expert</h6>
+    </div>
+    <div *ngIf="issue.username == 'pikachu'">
+      <h6 class="role">Student</h6>
+    </div>
+
+    <h3 class="title">{{issue.title}}</h3>
+    <h6 class="id">#{{issue.issueId}}</h6>
+    <p class="text">{{issue.text}}</p>
     <div class="others">
-      <div class="tag">Tag</div>
+      <div class="tag" *ngFor="let tag of issue.tags">{{tag.name}}</div>
       <button class="btn-show">Show more</button>
     </div>
 
