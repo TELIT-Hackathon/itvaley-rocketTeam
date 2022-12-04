@@ -18,6 +18,11 @@ public class TagsRepository
         return await _context.Tags.ToListAsync();
     }
 
+    public async Task<Tag> GetTag(string name)
+    {
+        return await _context.Tags.FirstOrDefaultAsync(p => p.Name == name);
+    }
+
     public async Task<int> AddTag(Tag tag)
     {
         _context.Set<Tag>().Add(tag);
