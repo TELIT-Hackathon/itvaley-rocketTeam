@@ -9,10 +9,12 @@
 
 
   .header {
+
     grid-area: header;
   }
 
   .nav-bar {
+    position: static;
     justify-self: start;
     grid-area: nav;
   }
@@ -24,6 +26,7 @@
   }
 
   .tags {
+
     justify-self: end;
     margin: auto;
   }

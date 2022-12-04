@@ -33,6 +33,8 @@ export class HomeComponent {
         data.tags = response[i].tags;
         this.issuesList.push(data);
       }
+      this.issuesList.sort((a, b) => (a.issueId> b.issueId ? -1 : 1));
     });
+
   }
 }
