@@ -28,4 +28,8 @@ export class WorkshopsComponent implements OnInit {
     this.Role = this.user.role;
   }
 
+  toWorkshops() {
+    this.router.navigateByUrl('/workshops');
+  }
+
 }

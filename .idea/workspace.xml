@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06365832-52e0-4517-8f4d-e99bfe56cf35" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/Services/account.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/Services/account.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/profile-nav/profile-nav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/profile-nav/profile-nav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/profile-nav/profile-nav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/profile-nav/profile-nav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/workshops/workshops.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/workshops/workshops.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/workshops/workshops.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/workshops/workshops.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

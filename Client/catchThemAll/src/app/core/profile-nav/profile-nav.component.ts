@@ -18,8 +18,6 @@ export class ProfileNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser$ = this.accountService.currentUser$;
-    this.username = this.getUserName();
-    this.role = this.getRole();
   }
 
   logout() {
@@ -27,15 +25,15 @@ export class ProfileNavComponent implements OnInit {
   }
 
   getRole() {
-    this.accountService.loadAccount().subscribe((response: IUser) => {
-     return response.role;
-    });
+    this.currentUser$?.subscribe((res: IUser) => {
+      this.role = res.role;
+    })
   }
 
   getUserName() {
-    this.accountService.loadAccount().subscribe((response: IUser) =>{
-      return response.userName;
-    });
+    this.currentUser$?.subscribe((res: IUser) => {
+      this.username = res.userName;
+    })
   }
 
 }
