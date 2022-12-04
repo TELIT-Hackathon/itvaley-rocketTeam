@@ -11,13 +11,14 @@ p {
 }
 
 .tags-item {
-    border-radius: 15px;
-    padding: 10px;
-    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
     margin: 5px;
     background-color: gray;
     width: 120px;
     color: white;
+    cursor: pointer;
 }
 
 .tag-count {
