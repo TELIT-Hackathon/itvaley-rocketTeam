@@ -20,7 +20,7 @@ export class NavBarComponent {
         }
       case 'messages':
         {
-          this.router.navigateByUrl("/")
+          this.router.navigateByUrl("/xd")
           break;
         }
       case 'workshops':

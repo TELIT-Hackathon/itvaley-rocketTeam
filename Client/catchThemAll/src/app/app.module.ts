@@ -16,6 +16,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { DetailedIssueComponent } from './detailed-issue/detailed-issue.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { DetailedIssueComponent } from './detailed-issue/detailed-issue.componen
     ReactiveFormsModule,
     CoreModule,
     AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   exports: [],

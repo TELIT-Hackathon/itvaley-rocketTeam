@@ -13,4 +13,10 @@ ul {
 
 li:hover {
   transform: scale(1.2);
+  color: #ED1B1B;
+}
+
+.active {
+  color: red;
+  font-weight: bool;
 }
