@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
-import { IUser } from "../Interfaces/User";
-import { AccountService } from "../Services/account.service";
-import { Router } from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {IUser} from "../Interfaces/User";
+import {AccountService} from "../Services/account.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-workshops',
@@ -14,10 +13,10 @@ export class WorkshopsComponent implements OnInit {
   Role!: string;
   user: IUser | undefined;
 
-  constructor(private accountService: AccountService, private router: Router) { }
+  constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
-    this.currentUserSource = this.accountService.loadAccount()
+    this.currentUserSource = this.accountService.returnUser();
     this.user = {
       email: "richard@gmail.com",
       username: "richard",

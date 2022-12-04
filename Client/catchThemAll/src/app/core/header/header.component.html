@@ -1,31 +1,27 @@
 <!--div holding content-->
 <div class="content">
 
-  <div class="left">
-    <!--div for left top corner items-->
-    <img class="logo" src="../../assets/images/pokemon-logo.png" alt="Logo" height="50px">
+  <div class="left" > <!--div for left top corner items-->
+    <img class="logo" src="../../assets/images/pokemon-logo.png" alt="Logo" height="50px" >
     <div class="right">
       <h2>CatchThemAll</h2>
       <h3>For {{Role}}s</h3>
     </div>
   </div>
 
-  <div class="center">
-    <!--div for search bar-->
+  <div class="center"> <!--div for search bar-->
     <i class="bi bi-search"></i>
     <input type="text" placeholder="Search..">
   </div>
 
   <div class="right">
-    <div class="profile" *ngIf="(currentUser$ | async ) !== null">
-      <!--ONLY ACTIVE USER, LOGGED IN  div for right top corner items, account, profile photo etc-->
+    <div class="profile" *ngIf="isRoleHere"> <!--ONLY ACTIVE USER, LOGGED IN  div for right top corner items, account, profile photo etc-->
       <app-profile-nav></app-profile-nav>
     </div>
-    <app-profile-nav></app-profile-nav>
-    <div *ngIf="(currentUser$ | async ) === null">
+    <div *ngIf="!isRoleHere">
       <button class="btn btn-login" (click)="toLogin()">Log in</button>
       <button class="btn btn-reg" (click)="toRegister()">Register</button>
     </div>
 
-  </div>
+</div>
 </div>
