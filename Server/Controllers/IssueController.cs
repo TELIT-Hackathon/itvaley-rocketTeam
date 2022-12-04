@@ -36,11 +36,10 @@ public class IssueController : ControllerBase
                         });
                     }
                 }
-
-                string pattern = "dd-mm-yyyy";
+            
                 var dbIssueDto = new DbIssueDto()
                 {
-                    Date = DateTime.Parse(issue.Date.ToString(pattern)),
+                    Date = issue.Date,
                     Tags = tagNameDtos,
                     Text = issue.Text,
                     Title = issue.Title,
