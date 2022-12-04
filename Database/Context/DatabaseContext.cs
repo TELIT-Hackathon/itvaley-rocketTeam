@@ -25,6 +25,7 @@ public class DatabaseContext : DbContext
     }
     
     
+    
     public DbSet<UserCredential> UserCredentials { get; set; } = null!;
     public DbSet<UserDetail> UserDetails { get; set; } = null!;
     public DbSet<Issue> Issues { get; set; } = null!;
