@@ -19,4 +19,10 @@ public class UserController: ControllerBase
     {
         return await RegisterMapper.Login(loginDto);
     }
+
+    [HttpGet(Name = "user_info")]
+    public async Task<UserInfoDto> GetUserInfo(string username)
+    {
+        return await UserInfoMapper.GetUserInfo(username);
+    }
 }
