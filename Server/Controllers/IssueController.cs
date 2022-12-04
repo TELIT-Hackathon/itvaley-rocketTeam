@@ -55,15 +55,19 @@ public class IssueController : ControllerBase
     {
         var issueRepository = new IssueRepository(DatabaseContext.Instance);
         var tagsRepository = new TagsRepository(DatabaseContext.Instance);
-        var userRepository = new UserRepository(DatabaseContext.Instance);
+        //var userRepository = new UserRepository(DatabaseContext.Instance);
         
         
-        var doka = await tagsRepository.GetTags();
+        //var doka = await tagsRepository.GetTags();
 
         var tagDtos = issueDto.Tags;
         var tags = new List<Tag>();
-
         foreach (var tagDto in tagDtos)
+        {
+            tags.Add(await tagsRepository.GetTag(tagDto.Name));
+        }
+
+        /*foreach (var tagDto in tagDtos)
         {
             foreach (var tag in doka)
             {
@@ -74,7 +78,7 @@ public class IssueController : ControllerBase
                 
             }
             
-        }
+        }*/
 
         var newIssue = new Issue()
         {
@@ -82,7 +86,7 @@ public class IssueController : ControllerBase
             Date = DateTime.Now,
             IsSolved = false,
             Text = issueDto.Text,
-            Tags = tags.ToArray(),
+            Tags = tags,
             Username= issueDto.Username
         };
 
