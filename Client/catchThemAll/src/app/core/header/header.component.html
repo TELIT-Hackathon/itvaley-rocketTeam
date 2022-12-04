@@ -18,11 +18,11 @@
     <div class="profile" *ngIf="(currentUser$ | async ) !== null"> <!--ONLY ACTIVE USER, LOGGED IN  div for right top corner items, account, profile photo etc-->
       <app-profile-nav></app-profile-nav>
     </div>
-
-    <div *ngIf="(currentUser$ | async ) === null">
-      <button class="btn btn-login" (click)="toLogin()">Log in</button>
-      <button class="btn btn-reg" (click)="toRegister()">Register</button>
-    </div>
+    <app-profile-nav></app-profile-nav>
+<!--    <div *ngIf="(currentUser$ | async ) === null">-->
+<!--      <button class="btn btn-login" (click)="toLogin()">Log in</button>-->
+<!--      <button class="btn btn-reg" (click)="toRegister()">Register</button>-->
+<!--    </div>-->
 
 </div>
 </div>
