@@ -25,4 +25,10 @@ public class UserController: ControllerBase
     {
         return await UserInfoMapper.GetUserInfo(username);
     }
+    
+    [HttpGet(Name = "user_info_without_tags")]
+    public async Task<UserInfoWithoutTagsDto> GetUserInfoWithoutTags(string username)
+    {
+        return await UserInfoMapper.GetUserInfoWithoutTags(username);
+    }
 }
