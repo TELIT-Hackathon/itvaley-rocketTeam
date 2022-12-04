@@ -39,16 +39,18 @@ public static class RegisterMapper
     public static async Task<UserDto?> Login(LoginDto login)
     {
         var repository = new UserRepository(DatabaseContext.Instance);
-        var userCredential = await repository.CheckCredential(login.Username);
+        var userCredential = await repository.CheckCredential(login.Username!);
+        var userDetail = await repository.GetUserDetail(login.Username!);
         if (login.Password == userCredential.Password)
         {
             return new UserDto()
             {
-                Email = userCredential.UserDetail.Email,
-                Token = userCredential.UserDetail.Id,
+                Email = userDetail.Email,
+                Token = userDetail.Id,
                 Username = userCredential.Username
             };
         }
+
         return null;
     }
     
