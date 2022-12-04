@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
 import {IUser} from "../Interfaces/User";
 import {AccountService} from "../Services/account.service";
 import {Router} from "@angular/router";
@@ -20,7 +19,7 @@ export class WorkshopsComponent implements OnInit {
     this.currentUserSource = this.accountService.returnUser();
     this.user = {
       email: "richard@gmail.com",
-      userName: "richard",
+      username: "richard",
       token: "1",
       role: "Expert"
     }

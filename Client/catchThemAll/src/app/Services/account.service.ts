@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {map, of} from "rxjs";
+import {map} from "rxjs";
 import {IUser} from "../Interfaces/User";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 
 @Injectable({
@@ -17,11 +17,14 @@ export class AccountService {
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
-          this.currentUserSource = user;
-          console.log(user)
-          console.log(this.currentUserSource.userName)
+          localStorage.setItem('username', user.username);
+          localStorage.setItem('role', user.role);
+          this.router.navigateByUrl('/').then(() => {
+            window.location.reload()
+          })
         }
       })
+
     );
   }
 
@@ -35,6 +38,9 @@ export class AccountService {
         if (user) {
           localStorage.setItem('token', user.token);
           this.currentUserSource = user;
+          this.router.navigateByUrl('/').then(() => {
+            window.location.reload()
+          })
         }
       })
     );
@@ -46,12 +52,10 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem('token')
-    this.currentUserSource = <IUser><unknown>null;
-    this.router.navigateByUrl('/');
+    localStorage.removeItem('role')
+    localStorage.removeItem('username')
+    this.router.navigateByUrl('/').then(() => {
+      window.location.reload();
+    });
   }
-
-  loadAccount() {
-    return this.http.get<IUser>('');
-  }
-
 }

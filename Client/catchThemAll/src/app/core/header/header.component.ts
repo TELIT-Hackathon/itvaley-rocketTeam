@@ -12,20 +12,21 @@ import {Router} from "@angular/router";
 
 export class HeaderComponent{
   currentUser$!: Observable<IUser>;
-  Role!: string;
+  Role = localStorage.getItem('role')
   user: IUser | undefined;
-
+  isRoleHere = !!localStorage.getItem('role')
 
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.loadAccount();
     this.user = {
       email: "richard@gmail.com",
-      userName: "richard",
+      username: "richard",
       token: "1",
       role: "Expert"
     }
+
+
 
 
   }

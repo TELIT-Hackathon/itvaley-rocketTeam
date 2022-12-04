@@ -19,18 +19,13 @@ export class ProfileNavComponent implements OnInit {
   ngOnInit(): void {
     this.currentUser$ = this.accountService.returnUser();
     console.log(this.currentUser$)
+    this.username = localStorage.getItem('username')
+    this.role = 'Expert'
   }
 
   logout() {
     this.accountService.logout();
   }
 
-  getRole(): string {
-    return <string>this.currentUser$?.role;
-  }
-
-  getUserName() {
-    return <string>this.currentUser$?.userName;
-  }
 
 }
