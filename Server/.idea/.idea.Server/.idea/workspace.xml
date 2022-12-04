@@ -4,25 +4,24 @@
     <projectFile>Database/Database.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e76becaf-1eb7-472b-ac00-1063bce22ee2" name="Changes" comment="&quot;added database connection&quot;">
-      <change beforePath="$PROJECT_DIR$/../Database/Context/DatabaseContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/Context/DatabaseContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Entities/UserDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/Entities/UserDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/20221203194255_firstMigration.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/20221203194255_firstMigration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/Migrations/DatabaseContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/bin/Debug/net6.0/Database.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/Database.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/ref/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/ref/Database.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/refint/Database.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/obj/Debug/net6.0/refint/Database.dll" afterDir="false" />
+    <list default="true" id="e76becaf-1eb7-472b-ac00-1063bce22ee2" name="Changes" comment="added singleton DatabaseContext.cs">
+      <change beforePath="$PROJECT_DIR$/../Database/Entities/UserCredential.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Database/Entities/UserCredential.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/IT Valley Team Rocket/Server/Controllers/test.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,6 +95,7 @@
     <recent_temporary>
       <list>
         <item itemvalue=".NET Project.Database" />
+        <item itemvalue=".NET Project.Database" />
       </list>
     </recent_temporary>
   </component>
@@ -124,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670099584352</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added gitignore">
+      <created>1670102750783</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670102750783</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added singleton DatabaseContext.cs">
+      <created>1670104994302</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670104994302</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +160,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;added database connection&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;added database connection&quot;" />
+    <MESSAGE value="added gitignore" />
+    <MESSAGE value="added singleton DatabaseContext.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added singleton DatabaseContext.cs" />
   </component>
 </project>
