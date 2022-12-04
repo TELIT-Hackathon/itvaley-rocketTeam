@@ -38,4 +38,10 @@ public class UserRepository
     {
         return await _context.UserDetails.FirstOrDefaultAsync(ud => ud.Username == username);
     }
+
+
+    public async Task<List<UserDetail>> GetAllUsers()
+    {
+        return await _context.UserDetails.ToListAsync();
+    }
 }
