@@ -15,6 +15,7 @@ public class IssueController : ControllerBase
     {
         var repository = new IssueRepository(DatabaseContext.Instance);
         var relationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
+        var tagsRepository = new TagsRepository(DatabaseContext.Instance);
         var issues = await repository.GetIssues();
         var dtoIssues = new List<DbIssueDto>();
 
@@ -30,7 +31,7 @@ public class IssueController : ControllerBase
                     {
                         tagNameDtos.Add(new TagNameDto()
                         {
-                            Name = tagRelation.Tag.Name
+                            Name = tagsRepository.GetTagById(tagRelation.TagId).Result.Name
                         });
                     }
                 }

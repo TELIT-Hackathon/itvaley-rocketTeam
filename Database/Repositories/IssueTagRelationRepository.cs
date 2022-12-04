@@ -18,8 +18,8 @@ public class IssueTagRelationRepository
     {
         _context.Set<IssueTagRelation>().Add(new IssueTagRelation()
         {
-            Issue = issue,
-            Tag = tag
+            IssueId = issue.IssueId,
+            TagId = tag.Id
         });
         var change = await _context.SaveChangesAsync();
 
@@ -32,7 +32,7 @@ public class IssueTagRelationRepository
 
     public List<IssueTagRelation> GetTags(int issueId)
     {
-        var select = _context.IssueTagRelations.Where(p => p.Issue.IssueId == issueId);
+        var select = _context.IssueTagRelations.Where(p => p.IssueId == issueId);
         return new List<IssueTagRelation>(select);
     }
 }
