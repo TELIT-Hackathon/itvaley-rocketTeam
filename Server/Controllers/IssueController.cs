@@ -23,7 +23,7 @@ public class IssueController : ControllerBase
     {
         var issueRepository = new IssueRepository(DatabaseContext.Instance);
         var tagsRepository = new TagsRepository(DatabaseContext.Instance);
-        var UserRepository = new UserRepository(DatabaseContext.Instance);
+        var userRepository = new UserRepository(DatabaseContext.Instance);
         
         
         var doka = await tagsRepository.GetTags();
@@ -40,9 +40,10 @@ public class IssueController : ControllerBase
             IsSolved = false,
             Text = issueDto.Text,
             Tags = tags.ToArray(),
-            UserDetail = await UserRepository.GetUserDetail(issueDto.Username)
+            UserDetail = await userRepository.GetUserDetail(issueDto.Username)
         };
 
         await issueRepository.AddIssue(newIssue);
+        
     }
 }
