@@ -14,33 +14,41 @@ public class IssueController : ControllerBase
     public async Task<List<DbIssueDto>> GetAllIssue()
     {
         var repository = new IssueRepository(DatabaseContext.Instance);
+        var relationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
+        var tagsRepository = new TagsRepository(DatabaseContext.Instance);
         var issues = await repository.GetIssues();
         var dtoIssues = new List<DbIssueDto>();
-            issues.ForEach(issue =>
-            {
-                var tags = issue.Tags.Select(issueTag => new TagDto() {Count = issueTag.Count, Name = issueTag.Name}).ToList();
-                var userTags = issue.UserDetail?.Tags!.Select(issueTag => new TagDto() {Count = issueTag.Count, Name = issueTag.Name}).ToList();
-                var userDetail = new UserDetailDto()
+
+        
+        
+        issues.ForEach(issue =>
+        {
+            var tagRelations = relationRepository.GetTags(issue.IssueId);
+                var tagNameDtos = new List<TagNameDto>();
+                if (tagRelations != null)
                 {
-                    Email = issue.UserDetail?.Email,
-                    Icon = issue.UserDetail.Icon,
-                    Id = issue.UserDetail.Id,
-                    Role = issue.UserDetail.Role,
-                    Tags = userTags,
-                    Username = issue.UserDetail.Username
-                };
+                    foreach (var tagRelation in tagRelations)
+                    {
+                        tagNameDtos.Add(new TagNameDto()
+                        {
+                            Name = tagsRepository.GetTagById(tagRelation.TagId).Result.Name
+                        });
+                    }
+                }
+                
                 var dbIssueDto = new DbIssueDto()
                 {
                     Date = issue.Date,
-                    Tags = tags,
+                    Tags = tagNameDtos,
                     Text = issue.Text,
-                    Title = issue.Text,
+                    Title = issue.Title,
                     IsSolved = issue.IsSolved,
                     IssueId = issue.IssueId,
-                    UserDetail = userDetail
+                    Username = issue.Username
                 };
                 dtoIssues.Add(dbIssueDto);
             });
+        
         return dtoIssues;
     }
     
@@ -49,15 +57,13 @@ public class IssueController : ControllerBase
     {
         var issueRepository = new IssueRepository(DatabaseContext.Instance);
         var tagsRepository = new TagsRepository(DatabaseContext.Instance);
-        var userRepository = new UserRepository(DatabaseContext.Instance);
+        var issueTagRelationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
+        //var userRepository = new UserRepository(DatabaseContext.Instance);
         
         
-        var doka = await tagsRepository.GetTags();
+        //var doka = await tagsRepository.GetTags();
 
-        var tagDtos = issueDto.Tags.TagNameDtos;
-        var tags = (from tagDto in tagDtos from tag in doka where tag.Name == tagDto.Name select tag).ToList();
-
-
+        
 
         var newIssue = new Issue()
         {
@@ -65,10 +71,60 @@ public class IssueController : ControllerBase
             Date = DateTime.Now,
             IsSolved = false,
             Text = issueDto.Text,
-            //Tags = tags.ToArray(),
-            UserDetail = await userRepository.GetUserDetail(issueDto.Username)
+            Username= issueDto.Username
         };
 
         await issueRepository.AddIssue(newIssue);
+        
+        var tagDtos = issueDto.Tags;
+        foreach (var tagDto in tagDtos)
+        {
+            issueTagRelationRepository.AddRelation(newIssue, await tagsRepository.GetTag(tagDto.Name));
+        }
+        
     }
+    
+    [HttpGet(Name = "getIssuesByIssueId")]
+    public async Task<List<Issue>> GetAllIssueByIssueId(int issueId)
+    {
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var issues = await repository.GetIssues();
+        var issuesById = new List<Issue>();
+        
+        issues.ForEach(iss =>
+        {
+            if (iss.IssueId == issueId)
+            {
+                issuesById.Add(iss);
+            }
+        });
+        
+        return issuesById ;
+    }
+    
+    [HttpGet(Name = "getIssuesByTags")]
+    public async Task<List<Issue>> GetAllIssueByTags()
+    {
+       
+        return null;
+    }
+    
+    [HttpGet(Name = "getIssuesByName")]
+    public async Task<List<Issue>> GetAllIssueByName(string issueName)
+    {
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var issues = await repository.GetIssues();
+        var issuesByName = new List<Issue>();
+        
+        issues.ForEach(iss =>
+        {
+            if (iss.Title == issueName)
+            {
+                issuesByName.Add(iss);
+            }
+        });
+        
+        return issuesByName ;
+    }
+    
 }
