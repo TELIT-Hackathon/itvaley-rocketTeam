@@ -41,7 +41,7 @@ public class IssueController : ControllerBase
                     Date = issue.Date,
                     Tags = tagNameDtos,
                     Text = issue.Text,
-                    Title = issue.Text,
+                    Title = issue.Title,
                     IsSolved = issue.IsSolved,
                     IssueId = issue.IssueId,
                     Username = issue.Username
@@ -83,4 +83,48 @@ public class IssueController : ControllerBase
         }
         
     }
+    
+    [HttpGet(Name = "getIssuesByIssueId")]
+    public async Task<List<Issue>> GetAllIssueByIssueId(int issueId)
+    {
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var issues = await repository.GetIssues();
+        var issuesById = new List<Issue>();
+        
+        issues.ForEach(iss =>
+        {
+            if (iss.IssueId == issueId)
+            {
+                issuesById.Add(iss);
+            }
+        });
+        
+        return issuesById ;
+    }
+    
+    [HttpGet(Name = "getIssuesByTags")]
+    public async Task<List<Issue>> GetAllIssueByTags()
+    {
+       
+        return null;
+    }
+    
+    [HttpGet(Name = "getIssuesByName")]
+    public async Task<List<Issue>> GetAllIssueByName(string issueName)
+    {
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var issues = await repository.GetIssues();
+        var issuesByName = new List<Issue>();
+        
+        issues.ForEach(iss =>
+        {
+            if (iss.Title == issueName)
+            {
+                issuesByName.Add(iss);
+            }
+        });
+        
+        return issuesByName ;
+    }
+    
 }
