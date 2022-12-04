@@ -35,4 +35,8 @@ export class NavBarComponent {
         }
     }
   }
+
+  toWorkshops() {
+    this.router.navigateByUrl('/workshops');
+  }
 }
