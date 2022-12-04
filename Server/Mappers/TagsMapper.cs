@@ -7,17 +7,12 @@ namespace Server.Mappers;
 
 public static class TagsMapper
 {
-    public static async Task<TagsDto> MapTagsDto()
+    public static async Task<List<TagDto>> MapTagsDto()
     {
         var repository = new TagsRepository(DatabaseContext.Instance);
         var tags = await repository.GetTags();
         
-        var tagsDto = tags.Select(tag => new TagDto() { Count = tag.Count, Name = tag.Name }).ToList();
-
-        return new TagsDto()
-        {
-            Tags = tagsDto
-        };
+        return tags.Select(tag => new TagDto() { Count = tag.Count, Name = tag.Name }).ToList();
     }
     
     
