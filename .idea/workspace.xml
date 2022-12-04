@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06365832-52e0-4517-8f4d-e99bfe56cf35" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/Interfaces/Role.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/Interfaces/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/Interfaces/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/Services/account.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/Services/account.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/account/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/core.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Client/catchThemAll/src/app/core/nav-bar/nav-bar.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +72,7 @@
       <workItem from="1670077058192" duration="2161000" />
       <workItem from="1670085784955" duration="6899000" />
       <workItem from="1670094187846" duration="6880000" />
-      <workItem from="1670101839721" duration="1716000" />
+      <workItem from="1670101839721" duration="12417000" />
     </task>
     <servers />
   </component>

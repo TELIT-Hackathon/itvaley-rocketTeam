@@ -20,6 +20,17 @@
             <app-text-input class="text-input" [type]="'email'"  [label]="'Email address'" formControlName="email"></app-text-input>
           </div>
 
+          <div class="form-group" >
+            <mat-form-field appearance="fill">
+              <mat-label>Pick your Role</mat-label>
+              <mat-select formControlName="role" [(ngModel)]="selectedValue" name="food">
+                <mat-option *ngFor="let role of roles" [value]="role.value">
+                  {{role.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
           <div class="form-group">
             <app-text-input [label]="'Password'" [type]="'password'" formControlName="password"></app-text-input>
           </div>

@@ -8,7 +8,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './account/login/login.component';
 import {RegisterComponent} from './account/register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CoreModule} from "./core/core.module";
 import {TextInputComponent} from "./account/text-input/text-input.component";
 import {TextFieldModule} from '@angular/cdk/text-field';
@@ -16,6 +16,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
 import {DetailedIssueComponent} from './detailed-issue/detailed-issue.component';
+import { WorkshopsComponent } from './workshops/workshops.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import {DetailedIssueComponent} from './detailed-issue/detailed-issue.component'
     RegisterComponent,
     TextInputComponent,
     DetailedIssueComponent,
+    WorkshopsComponent,
 
   ],
   imports: [
@@ -39,6 +41,7 @@ import {DetailedIssueComponent} from './detailed-issue/detailed-issue.component'
     ReactiveFormsModule,
     CoreModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   exports: [],
