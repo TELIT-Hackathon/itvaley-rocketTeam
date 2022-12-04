@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
-import { IUser } from "../../Interfaces/User";
-import { AccountService } from "../../Services/account.service";
+import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
+import {IUser} from "../../Interfaces/User";
+import {AccountService} from "../../Services/account.service";
 
 @Component({
   selector: 'app-profile-nav',
@@ -17,22 +17,15 @@ export class ProfileNavComponent implements OnInit {
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
-    this.accountService.loadAccount();
+    this.currentUser$ = this.accountService.returnUser();
     console.log(this.currentUser$)
-    this.username = localStorage.getItem("username")
-    this.role = localStorage.getItem("role")
+    this.username = localStorage.getItem('username')
+    this.role = 'Expert'
   }
 
   logout() {
     this.accountService.logout();
   }
 
-  getRole(): string {
-    return <string>this.currentUser$?.role;
-  }
-
-  getUserName() {
-    return <string>this.currentUser$?.username;
-  }
 
 }
