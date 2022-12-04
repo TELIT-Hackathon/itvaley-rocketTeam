@@ -42,5 +42,7 @@ public class IssueController : ControllerBase
             Tags = tags.ToArray(),
             UserDetail = await UserRepository.GetUserDetail(issueDto.Username)
         };
+
+        await issueRepository.AddIssue(newIssue);
     }
 }
