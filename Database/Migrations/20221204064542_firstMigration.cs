@@ -26,6 +26,20 @@ namespace Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "IssueTagRelations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    IssueId = table.Column<int>(type: "int", nullable: false),
+                    TagId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IssueTagRelations", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "UserDetails",
                 columns: table => new
                 {
@@ -49,18 +63,11 @@ namespace Database.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Count = table.Column<int>(type: "int", nullable: false),
-                    IssueId = table.Column<int>(type: "int", nullable: true),
                     UserDetailId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tags", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Tags_Issues_IssueId",
-                        column: x => x.IssueId,
-                        principalTable: "Issues",
-                        principalColumn: "IssueId",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Tags_UserDetails_UserDetailId",
                         column: x => x.UserDetailId,
@@ -91,11 +98,6 @@ namespace Database.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tags_IssueId",
-                table: "Tags",
-                column: "IssueId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Tags_UserDetailId",
                 table: "Tags",
                 column: "UserDetailId");
@@ -109,13 +111,16 @@ namespace Database.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Issues");
+
+            migrationBuilder.DropTable(
+                name: "IssueTagRelations");
+
+            migrationBuilder.DropTable(
                 name: "Tags");
 
             migrationBuilder.DropTable(
                 name: "UserCredentials");
-
-            migrationBuilder.DropTable(
-                name: "Issues");
 
             migrationBuilder.DropTable(
                 name: "UserDetails");

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20221204054121_firstMigration")]
+    [Migration("20221204064542_firstMigration")]
     partial class firstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,23 @@ namespace Database.Migrations
                     b.ToTable("Issues");
                 });
 
+            modelBuilder.Entity("Database.Entities.IssueTagRelation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("IssueId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("IssueTagRelations");
+                });
+
             modelBuilder.Entity("Database.Entities.Tag", b =>
                 {
                     b.Property<int>("Id")
@@ -55,9 +72,6 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IssueId")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
@@ -68,8 +82,6 @@ namespace Database.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("IssueId");
 
                     b.HasIndex("UserDetailId");
 
@@ -123,10 +135,6 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Database.Entities.Tag", b =>
                 {
-                    b.HasOne("Database.Entities.Issue", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("IssueId");
-
                     b.HasOne("Database.Entities.UserDetail", null)
                         .WithMany("Tags")
                         .HasForeignKey("UserDetailId");
@@ -139,11 +147,6 @@ namespace Database.Migrations
                         .HasForeignKey("UserDetailId");
 
                     b.Navigation("UserDetail");
-                });
-
-            modelBuilder.Entity("Database.Entities.Issue", b =>
-                {
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Database.Entities.UserDetail", b =>
