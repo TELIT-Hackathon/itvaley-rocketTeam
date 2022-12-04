@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
-import {AccountService} from "../../Services/account.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { UntypedFormControl, UntypedFormGroup, Validators } from "@angular/forms";
+import { AccountService } from "../../Services/account.service";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -37,8 +37,8 @@ export class LoginComponent implements OnInit {
     this.accountService.login(this.loginForm.value).subscribe(() => {
       console.log('user logged in');
       console.log(localStorage.getItem('token'));
+      this.accountService.loadAccount();
       this.router.navigateByUrl('/').then(() => {
-        window.location.reload();
       });
     }, error => {
       console.log(error);

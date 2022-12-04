@@ -1,8 +1,8 @@
-import {Component} from '@angular/core';
-import {map, Observable} from "rxjs";
-import {IUser} from "../../Interfaces/User";
-import {AccountService} from "../../Services/account.service";
-import {Router} from "@angular/router";
+import { Component } from '@angular/core';
+import { map, Observable } from "rxjs";
+import { IUser } from "../../Interfaces/User";
+import { AccountService } from "../../Services/account.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -10,23 +10,24 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent{
+export class HeaderComponent {
   currentUser$!: Observable<IUser>;
-  Role!: string;
+  Role: any;
   user: IUser | undefined;
 
 
-  constructor(private accountService: AccountService, private router: Router) {}
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.loadAccount();
+    this.accountService.loadAccount();
     this.user = {
       email: "richard@gmail.com",
-      userName: "richard",
+      username: "richard",
       token: "1",
       role: "Expert"
     }
 
+    this.Role = localStorage.getItem("role")
 
   }
 
