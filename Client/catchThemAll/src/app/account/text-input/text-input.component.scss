@@ -1,12 +1,11 @@
 input {
     background-color: transparent;
-    color: white;   
+    color: black;
     outline: none;
     display: inline-block;
-    color: white; 
     border: 1px solid #656565;
-    width: 90%;
-    margin-left: 50%;
+    width: 50%;
+    margin-left: 25%;
     margin-right: 50%;
     transform: translate(-50%, -50%);
     margin-top: 15px;
@@ -14,12 +13,14 @@ input {
 
 input:focus{
     background-color: transparent;
-    color: white;
+    color: black;
 }
 
 label {
     display: none;
 }
+
+
 
 .error-message {
     margin-top: -12px;
