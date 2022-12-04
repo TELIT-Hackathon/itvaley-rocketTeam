@@ -47,7 +47,8 @@ public static class RegisterMapper
             {
                 Email = userDetail.Email,
                 Token = userDetail.Id,
-                Username = userCredential.Username
+                Username = userCredential.Username,
+                Role = userDetail.Role
             };
         }
 
