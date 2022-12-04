@@ -11,6 +11,7 @@ import {IssuesData} from "../Interfaces/IssuesData";
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent {
+  newIssue = {} as IssuesData;
   issuesList : IssuesData [] = [];
   tagsList: Tags [] = [];
   public role : string = "";
@@ -48,6 +49,8 @@ export class HomeComponent {
   }
 
   onSubmit(){
-
+    this.issueService.addIssues(this.newIssue).subscribe(n =>{
+      this.getIssues();
+    })
   }
 }

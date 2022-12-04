@@ -1,23 +1,27 @@
-<div class="add-post">
+<form (ngSubmit)="onSubmit()" #formModel="ngForm">
+  <div class="add-post">
   <div class="left-side">
     <img class="profile-pic " src="../../assets/images/pokemons/charmander.png" alt="Profile picture">
   </div>
-  <form (ngSubmit)="onSubmit()" #formModel="ngForm">
+
   <div class="right-side">
     <form class="add-post-form">
-      <textarea id="title" name="title" class="add-post-title" placeholder="Add title"></textarea>
-      <textarea id="text" name="text" class="add-post-text" placeholder="Text here"></textarea>
+      <textarea id="title" name="title" class="add-post-title" placeholder="Add title" [(ngModel)]="newIssue.title"
+                #titleModel="ngModel"></textarea>
+      <textarea id="text" name="text" class="add-post-text" placeholder="Text here"  [(ngModel)]="newIssue.text"
+                #textModel="ngModel"></textarea>
     </form>
     <div class="others">
       <i class="bi bi-card-image"></i>
       <i class="bi bi-link-45deg"></i>
-      <input id="tags" name="tags" class="add-tags" type="text" placeholder="Add tags">
+      <input [(ngModel)]="newIssue.tags"
+             #tagsModel="ngModel" id="tags" name="tags" class="add-tags" type="text" placeholder="Add tags">
       <button  type="submit" class="btn-post">Post</button>
     </div>
   </div>
-  </form>
-</div>
 
+</div>
+</form>
 <div class="post" *ngFor="let issue of issuesList">
   <div class="left-side">
       <div *ngIf="issue.username == 'charmander'">
@@ -48,7 +52,7 @@
     <h6 class="id">#{{issue.issueId}}</h6>
     <p class="text">{{issue.text}}</p>
     <div class="others">
-      <div class="tag">{{issue.tags}}</div>
+      <div class="tag" *ngFor="let tag of issue.tags">{{tag.name}}</div>
       <button class="btn-show">Show more</button>
     </div>
 
