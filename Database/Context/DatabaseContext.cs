@@ -6,7 +6,7 @@ namespace Database.Context;
 
 public class DatabaseContext : DbContext
 {
-    private static DatabaseContext instance = null;
+    /*private static DatabaseContext instance = null;
 
     private DatabaseContext()
     {
@@ -23,6 +23,8 @@ public class DatabaseContext : DbContext
             return instance;
         }
     }
+    */
+    
     
     
     public DbSet<UserCredential> UserCredentials { get; set; } = null!;
