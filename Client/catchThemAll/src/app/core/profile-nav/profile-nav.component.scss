@@ -1,0 +1,35 @@
+.content{
+  width: 203px;
+  display: flex;
+}
+
+.data{
+  padding-left: 8px;
+}
+
+.username{
+  display: block;
+}
+
+h5, h6{
+  margin: 0;
+}
+
+h5{
+  font-size: 18px;
+}
+
+h6{
+  font-size: 14px;
+}
+
+.role{
+  display: block;
+}
+.profile-pic {
+  display: inline;
+  border: 3px solid #333333;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
