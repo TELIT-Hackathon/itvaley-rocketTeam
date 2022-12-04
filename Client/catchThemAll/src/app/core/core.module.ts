@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileNavComponent } from "./profile-nav/profile-nav.component";
 import { RecentTagsComponent } from './recent-tags/recent-tags.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -19,6 +20,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     NavBarComponent,
