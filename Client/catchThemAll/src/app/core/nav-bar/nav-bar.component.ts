@@ -35,4 +35,7 @@ export class NavBarComponent {
         }
     }
   }
+  logout(){
+
+  }
 }
