@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {map, of, ReplaySubject} from "rxjs";
+import {map, of} from "rxjs";
 import {IUser} from "../Interfaces/User";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Router} from "@angular/router";
@@ -9,21 +9,24 @@ import {Router} from "@angular/router";
 })
 
 export class AccountService {
-  private currentUserSource = new ReplaySubject<IUser>(1);
-  currentUser$ = this.currentUserSource.asObservable();
-
-  constructor(private http: HttpClient, private router: Router) {
-  }
+  private currentUserSource?: IUser;
+  constructor(private http: HttpClient, private router: Router) {}
 
   login(values: any) {
     return this.http.post<IUser>('https://localhost:7032/User/Login', values).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
-          this.currentUserSource.next(user);
+          this.currentUserSource = user;
+          console.log(user)
+          console.log(this.currentUserSource.userName)
         }
       })
     );
+  }
+
+  returnUser() {
+    return this.currentUserSource;
   }
 
   register(values: any) {
@@ -31,7 +34,7 @@ export class AccountService {
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
-          this.currentUserSource.next(user);
+          this.currentUserSource = user;
         }
       })
     );
@@ -43,8 +46,7 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem('token')
-    // @ts-ignore
-    this.currentUserSource.next(null);
+    this.currentUserSource = <IUser><unknown>null;
     this.router.navigateByUrl('/');
   }
 
@@ -52,23 +54,4 @@ export class AccountService {
     return this.http.get<IUser>('');
   }
 
-  loadCurrentUser(token: String) {
-    if (token === null) {
-      // @ts-ignore
-      this.currentUserSource.next(null);
-      return of(null);
-    }
-
-    let headers = new HttpHeaders();
-    headers = headers.set('Authorization', `Bearer ${token}`);
-
-    return this.http.get<IUser>('account', {headers}).pipe(
-      map((user: IUser) => {
-        if (user) {
-          localStorage.setItem('token', user.token);
-          this.currentUserSource.next(user);
-        }
-      })
-    );
-  }
 }

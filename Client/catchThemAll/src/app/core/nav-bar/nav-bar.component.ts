@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {AccountService} from "../../Services/account.service";
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private accountService: AccountService) {
 
   }
   RedirectTo(id: string): void {
@@ -36,7 +37,7 @@ export class NavBarComponent {
     }
   }
   logout(){
-
+    this.accountService.logout();
   }
 
   toWorkshops() {

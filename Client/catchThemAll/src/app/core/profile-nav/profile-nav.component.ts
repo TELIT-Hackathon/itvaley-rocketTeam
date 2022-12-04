@@ -9,7 +9,7 @@ import {AccountService} from "../../Services/account.service";
   styleUrls: ['./profile-nav.component.scss']
 })
 export class ProfileNavComponent implements OnInit {
-  currentUser$: Observable<IUser> | undefined
+  currentUser$: IUser | undefined
 
   username: any;
   role: any;
@@ -17,25 +17,20 @@ export class ProfileNavComponent implements OnInit {
   constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.currentUser$;
-    this.username = this.getUserName();
-    this.role = this.getRole();
+    this.currentUser$ = this.accountService.returnUser();
+    console.log(this.currentUser$)
   }
 
   logout() {
     this.accountService.logout();
   }
 
-  getRole() {
-    this.accountService.loadAccount().subscribe((response: IUser) => {
-     return response.role;
-    });
+  getRole(): string {
+    return <string>this.currentUser$?.role;
   }
 
   getUserName() {
-    this.accountService.loadAccount().subscribe((response: IUser) =>{
-      return response.userName;
-    });
+    return <string>this.currentUser$?.userName;
   }
 
 }

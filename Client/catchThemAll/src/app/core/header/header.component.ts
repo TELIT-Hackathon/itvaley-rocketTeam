@@ -19,7 +19,7 @@ export class HeaderComponent{
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.currentUser$;
+    this.currentUser$ = this.accountService.loadAccount();
     this.user = {
       email: "richard@gmail.com",
       userName: "richard",
