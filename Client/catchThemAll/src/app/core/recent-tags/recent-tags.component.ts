@@ -13,12 +13,6 @@ export class RecentTagsComponent {
 
 
 
-  pythonTag: ITags = { name: "Python", count: this.thousandFormater(28880) }
-  javaTag: ITags = { name: "Java", count: this.thousandFormater(250) }
-  LuaTag: ITags = { name: "Lua", count: this.thousandFormater(108000) }
-
-  allTags = [this.pythonTag, this.javaTag, this.LuaTag]
-
   tags: Tags[] = []
   constructor(private tagsService: TagsService) { }
 
