@@ -16,7 +16,7 @@ export class AccountService {
   }
 
   login(values: any) {
-    return this.http.post<IUser>('SOME URL', values).pipe(
+    return this.http.post<IUser>('https://localhost:7032/User/Login', values).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
@@ -27,7 +27,7 @@ export class AccountService {
   }
 
   register(values: any) {
-    return this.http.post<IUser>('SOME URL', values).pipe(
+    return this.http.post<IUser>('https://localhost:7032/User/Register', values).pipe(
       map((user: IUser) => {
         if (user) {
           localStorage.setItem('token', user.token);
@@ -49,7 +49,7 @@ export class AccountService {
   }
 
   loadAccount() {
-    return this.http.get<IUser>('SOME URL');
+    return this.http.get<IUser>('');
   }
 
   loadCurrentUser(token: String) {
