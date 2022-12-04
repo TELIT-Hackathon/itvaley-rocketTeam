@@ -3,20 +3,11 @@ export interface Issue{
   title: string;
   date: string;
   isSolved: boolean;
+  text: string;
   tags : Tags[];
-  userDetail: UserDetail[];
+  username: string;
 }
 export interface Tags{
-  id: number;
   name: string;
-  count: number;
 }
 
-export interface UserDetail{
-  id: number;
-  username: string;
-  email: string;
-  role: string;
-  tags: Tags[];
-  icon: string;
-}
