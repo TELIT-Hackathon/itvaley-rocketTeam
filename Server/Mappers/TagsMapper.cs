@@ -1,4 +1,5 @@
 using Database.Context;
+using Database.Entities;
 using Database.Repositories;
 using Server.Dtos;
 
@@ -17,5 +18,26 @@ public static class TagsMapper
         {
             Tags = tagsDto
         };
-    } 
+    }
+    
+    
+   /* public static async Task<List<Tag>> MapTags(List<TagNameDto> tagsDto)
+    {
+        var tags = new List<Tag>();
+
+        foreach (var tagNameDto in tagsDto)
+        {
+            tags.Add(new Tag
+            {
+                Id = 0,
+                Name = null,
+                Count = 0
+            });   
+        }
+        
+        
+
+        return 
+    }
+    */
 }
