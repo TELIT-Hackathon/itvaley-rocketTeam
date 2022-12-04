@@ -4,7 +4,7 @@
     <projectFile>Database/Database.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e76becaf-1eb7-472b-ac00-1063bce22ee2" name="Changes" comment="&quot;added database connection&quot;" />
+    <list default="true" id="e76becaf-1eb7-472b-ac00-1063bce22ee2" name="Changes" comment="added get and post for tags" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
