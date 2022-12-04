@@ -16,20 +16,37 @@ public class IssueController : ControllerBase
         var repository = new IssueRepository(DatabaseContext.Instance);
         var issues = await repository.GetIssues();
         var dtoIssues = new List<DbIssueDto>();
-            issues.ForEach(issue =>
-            {
+
+        
+        
+        issues.ForEach(issue =>
+        {
+            var tags = issue.Tags;
+                var tagNameDtos = new List<TagNameDto>();
+                if (tags != null)
+                {
+                    foreach (var tag in tags)
+                    {
+                        tagNameDtos.Add(new TagNameDto()
+                        {
+                            Name = tag.Name
+                        });
+                    }
+                }
+                
                 var dbIssueDto = new DbIssueDto()
                 {
                     Date = issue.Date,
-                    Tags = issue.Tags,
+                    Tags = tagNameDtos,
                     Text = issue.Text,
                     Title = issue.Text,
                     IsSolved = issue.IsSolved,
                     IssueId = issue.IssueId,
-                    UserDetail = issue.UserDetail
+                    Username = issue.UserDetail?.Username
                 };
                 dtoIssues.Add(dbIssueDto);
             });
+        
         return dtoIssues;
     }
     
