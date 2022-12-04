@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   createLoginForm() {
     this.loginForm = new UntypedFormGroup({
-      email: new UntypedFormControl('', [Validators.email, Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+      username: new UntypedFormControl('', [Validators.required, Validators.maxLength(25), Validators.pattern('^[A-Za-zÀ-ž0-9]+$')]),
       password: new UntypedFormControl('', Validators.required)
     })
   }
