@@ -29,8 +29,13 @@ public class UserRepository
         return change > 0 ? change : 0;
     }
 
-    public async Task<UserCredential> CheckCredential(string? username)
+    public async Task<UserCredential> CheckCredential(string username)
     {
-        return await _context.UserCredentials.FirstOrDefaultAsync(u => u.Password == username);
+        return await _context.UserCredentials.FirstOrDefaultAsync(u => u.Username == username);
+    }
+
+    public async Task<UserDetail> GetUserDetail(string username)
+    {
+        return await _context.UserDetails.FirstOrDefaultAsync(ud => ud.Username == username);
     }
 }
