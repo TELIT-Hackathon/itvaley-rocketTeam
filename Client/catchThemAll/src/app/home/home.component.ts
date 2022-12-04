@@ -1,6 +1,5 @@
-import {CdkTextareaAutosize} from '@angular/cdk/text-field';
-import {Component, NgZone, ViewChild, ViewEncapsulation} from '@angular/core';
-import {take} from 'rxjs/operators';
+
+import {Component, ViewEncapsulation} from '@angular/core';
 import {IssuesService} from "../Services/issues.service";
 import {Issue, Tags, UserDetail} from "../Interfaces/Issues";
 @Component({
@@ -14,16 +13,12 @@ export class HomeComponent {
   tagsList: Tags [] = [];
   userDetail: UserDetail [] = [];
 
-  constructor(private _ngZone: NgZone, private issueService: IssuesService) {}
-  @ViewChild('autosize') autosize: CdkTextareaAutosize | undefined;
+  constructor(private issueService: IssuesService) {}
   ngOnInit(): void {
     this.getIssues();
 
   }
-  triggerResize() {
-    // Wait for changes to be applied, then trigger textarea resize.
-    this._ngZone.onStable.pipe(take(1)).subscribe(() => this.autosize!.resizeToFitContent(true));
-  }
+
 
   getIssues(){
     this.issueService.getAllIssues().subscribe((response: Issue[]) =>{
