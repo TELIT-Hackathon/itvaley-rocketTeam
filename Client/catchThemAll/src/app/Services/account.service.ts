@@ -18,7 +18,8 @@ export class AccountService {
         if (user) {
           localStorage.setItem('token', user.token);
           localStorage.setItem('username', user.username);
-          localStorage.setItem('role', user.role);
+          localStorage.setItem('role', user.role.toString());
+          console.log(user)
           this.router.navigateByUrl('/').then(() => {
             window.location.reload()
           })
