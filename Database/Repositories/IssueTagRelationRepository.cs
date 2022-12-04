@@ -35,4 +35,10 @@ public class IssueTagRelationRepository
         var select = _context.IssueTagRelations.Where(p => p.IssueId == issueId);
         return new List<IssueTagRelation>(select);
     }
+
+    public List<IssueTagRelation> GetIssuesByTag(Tag tag)
+    {
+        var select = _context.IssueTagRelations.Where(p => p.TagId == tag.Id);
+        return new List<IssueTagRelation>(select);
+    }
 }

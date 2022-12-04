@@ -29,7 +29,12 @@ public class IssueRepository
     
     public async Task<List<Issue>> GetIssues()
     {
-        return  _context.Issues.ToList();
+        return  await  _context.Issues.ToListAsync();
+    }
+
+    public async Task<Issue> GetIssueById(int id)
+    {
+        return await _context.Issues.FirstOrDefaultAsync(p => p.IssueId == id);
     }
     
 }

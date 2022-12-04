@@ -134,10 +134,50 @@ public class IssueController : ControllerBase
     }
     
     [HttpGet(Name = "getIssuesByTags")]
-    public async Task<List<Issue>> GetAllIssueByTags()
+    public async Task<List<DbIssueDto>> GetAllIssueByTags(string issueTag)
     {
-       
-        return null;
+        var repository = new IssueRepository(DatabaseContext.Instance);
+        var relationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
+        var tagsRepository = new TagsRepository(DatabaseContext.Instance);
+        var dtoIssues = new List<DbIssueDto>();
+
+        var issues = new List<Issue>();
+        var issueTagRelations = relationRepository.GetIssuesByTag(await tagsRepository.GetTag(issueTag));
+        foreach (var issueTagRelation in issueTagRelations)
+        {
+            issues.Add(await repository.GetIssueById(issueTagRelation.IssueId));
+        }
+        
+        issues.ForEach(issue =>
+        {
+            var tagRelations = relationRepository.GetTags(issue.IssueId);
+            var tagNameDtos = new List<TagNameDto>();
+            if (tagRelations != null)
+            {
+                foreach (var tagRelation in tagRelations)
+                {
+                    tagNameDtos.Add(new TagNameDto()
+                    {
+                        Name = tagsRepository.GetTagById(tagRelation.TagId).Result.Name
+                    });
+                }
+            }
+                
+            var dbIssueDto = new DbIssueDto()
+            {
+                Date = issue.Date,
+                Tags = tagNameDtos,
+                Text = issue.Text,
+                Title = issue.Title,
+                IsSolved = issue.IsSolved,
+                IssueId = issue.IssueId,
+                Username = issue.Username
+            };
+            dtoIssues.Add(dbIssueDto);
+        });
+        
+        
+        return dtoIssues ;
     }
     
     [HttpGet(Name = "getIssuesByName")]
