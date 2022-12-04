@@ -14,6 +14,7 @@ export class Tags {
         return Math.abs(number) > 999 ? Math.sign(number) * ((Math.abs(number) / 1000)) + 'k' :
             Math.sign(number) * Math.abs(number)
     }
+
     constructor(
         public name: string,
         public count: number | string,
