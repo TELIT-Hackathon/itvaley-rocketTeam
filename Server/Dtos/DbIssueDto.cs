@@ -12,3 +12,13 @@ public class DbIssueDto
     public Tag[] Tags { get; set; } = null!;
     public UserDetail? UserDetail { get; set; }
 }
+
+public class DtUserDetail
+{
+    public int Id { get; set; }
+    public string? Username { get; set; }
+    public string? Email { get; set; }
+    public string? Role { get; set; }
+    public List<Tag>? Tags{ get; set;}
+    public int Icon { get; set; }
+}

@@ -43,10 +43,21 @@ public class IssueController : ControllerBase
         
         var doka = await tagsRepository.GetTags();
 
-        var tagDtos = issueDto.Tags.TagNameDtos;
-        var tags = (from tagDto in tagDtos from tag in doka where tag.Name == tagDto.Name select tag).ToList();
+        var tagDtos = issueDto.Tags;
+        var tags = new List<Tag>();
 
-
+        foreach (var tagDto in tagDtos)
+        {
+            foreach (var tag in doka)
+            {
+                if (tag.Name == tagDto.Name)
+                {
+                    tags.Add(tag);
+                }
+                
+            }
+            
+        }
 
         var newIssue = new Issue()
         {

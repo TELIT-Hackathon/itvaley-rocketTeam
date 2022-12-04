@@ -6,7 +6,7 @@ public class IssueDto
 {
     public string Title { get; set; }
     public string Text { get; set; }
-    public TagNamesDto Tags { get; set; }
+    public TagNameDto[] Tags { get; set; }
     public string Username { get; set; }
 }
 
