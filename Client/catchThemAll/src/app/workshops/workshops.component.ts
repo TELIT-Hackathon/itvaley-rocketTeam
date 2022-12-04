@@ -10,14 +10,14 @@ import {Router} from "@angular/router";
   styleUrls: ['./workshops.component.scss']
 })
 export class WorkshopsComponent implements OnInit {
-  currentUser$!: Observable<IUser>;
+  currentUserSource: IUser | any;
   Role!: string;
   user: IUser | undefined;
 
   constructor(private accountService: AccountService, private router: Router) {}
 
   ngOnInit(): void {
-    this.currentUser$ = this.accountService.currentUser$;
+    this.currentUserSource = this.accountService.returnUser();
     this.user = {
       email: "richard@gmail.com",
       userName: "richard",
