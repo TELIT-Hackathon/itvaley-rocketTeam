@@ -34,4 +34,18 @@ public class UserInfoMapper
             Tags = tagNameDtos
         };
     }
+    
+    public static async Task<UserInfoWithoutTagsDto> GetUserInfoWithoutTags(string username)
+    {
+        var repository = new UserRepository(DatabaseContext.Instance);
+
+        var userDetail = await repository.GetUserDetail(username);
+
+        return new UserInfoWithoutTagsDto()
+        {
+            Email = userDetail.Email,
+            Role = userDetail.Role,
+            Username = userDetail.Username
+        };
+    }
 }
