@@ -27,15 +27,10 @@ export class HomeComponent {
         data.date = response[i].date;
         data.title = response[i].title;
         data.isSolved = response[i].isSolved;
+        console.log(data.isSolved)
         data.text = response[i].text;
         data.username = response[i].username;
-        // let tagsData = data.tags;
-        // for(let j=0; j<tagsData.length; j++){
-        //   let tags = {} as Tags;
-        //   tags.name = tagsData[j].name
-        //   this.tagsList.push(tags)
-        // }
-        // data.tags = this.tagsList;
+        data.tags = response[i].tags;
         this.issuesList.push(data);
       }
     });
