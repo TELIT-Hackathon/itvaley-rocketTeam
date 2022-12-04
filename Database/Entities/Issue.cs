@@ -8,5 +8,6 @@ public class Issue
     public bool IsSolved { get; set; }
     public string Text { get; set; } = null!;
     public Tag[] Tags { get; set; } = null!;
-    public UserDetail? UserDetail { get; set; }
+
+    public string Username { get; set; } = null!;
 }

@@ -42,7 +42,7 @@ public class IssueController : ControllerBase
                     Title = issue.Text,
                     IsSolved = issue.IsSolved,
                     IssueId = issue.IssueId,
-                    Username = issue.UserDetail?.Username
+                    Username = issue.Username
                 };
                 dtoIssues.Add(dbIssueDto);
             });
@@ -83,7 +83,7 @@ public class IssueController : ControllerBase
             IsSolved = false,
             Text = issueDto.Text,
             Tags = tags.ToArray(),
-            UserDetail = await userRepository.GetUserDetail(issueDto.Username)
+            Username= issueDto.Username
         };
 
         await issueRepository.AddIssue(newIssue);
