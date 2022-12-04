@@ -18,15 +18,26 @@ public class IssueController : ControllerBase
         var dtoIssues = new List<DbIssueDto>();
             issues.ForEach(issue =>
             {
+                var tags = issue.Tags.Select(issueTag => new TagDto() {Count = issueTag.Count, Name = issueTag.Name}).ToList();
+                var userTags = issue.UserDetail?.Tags!.Select(issueTag => new TagDto() {Count = issueTag.Count, Name = issueTag.Name}).ToList();
+                var userDetail = new UserDetailDto()
+                {
+                    Email = issue.UserDetail?.Email,
+                    Icon = issue.UserDetail.Icon,
+                    Id = issue.UserDetail.Id,
+                    Role = issue.UserDetail.Role,
+                    Tags = userTags,
+                    Username = issue.UserDetail.Username
+                };
                 var dbIssueDto = new DbIssueDto()
                 {
                     Date = issue.Date,
-                    Tags = issue.Tags,
+                    Tags = tags,
                     Text = issue.Text,
                     Title = issue.Text,
                     IsSolved = issue.IsSolved,
                     IssueId = issue.IssueId,
-                    UserDetail = issue.UserDetail
+                    UserDetail = userDetail
                 };
                 dtoIssues.Add(dbIssueDto);
             });
@@ -54,7 +65,7 @@ public class IssueController : ControllerBase
             Date = DateTime.Now,
             IsSolved = false,
             Text = issueDto.Text,
-            Tags = tags.ToArray(),
+            //Tags = tags.ToArray(),
             UserDetail = await userRepository.GetUserDetail(issueDto.Username)
         };
 
