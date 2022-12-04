@@ -29,6 +29,7 @@ public class DatabaseContext : DbContext
     public DbSet<UserDetail> UserDetails { get; set; } = null!;
     public DbSet<Issue> Issues { get; set; } = null!;
     public DbSet<Tag> Tags { get; set; } = null!;
+    public DbSet<IssueTagRelation> IssueTagRelations { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

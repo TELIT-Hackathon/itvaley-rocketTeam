@@ -14,6 +14,7 @@ public class IssueController : ControllerBase
     public async Task<List<DbIssueDto>> GetAllIssue()
     {
         var repository = new IssueRepository(DatabaseContext.Instance);
+        var relationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
         var issues = await repository.GetIssues();
         var dtoIssues = new List<DbIssueDto>();
 
@@ -21,15 +22,15 @@ public class IssueController : ControllerBase
         
         issues.ForEach(issue =>
         {
-            var tags = issue.Tags;
+            var tagRelations = relationRepository.GetTags(issue.IssueId);
                 var tagNameDtos = new List<TagNameDto>();
-                if (tags != null)
+                if (tagRelations != null)
                 {
-                    foreach (var tag in tags)
+                    foreach (var tagRelation in tagRelations)
                     {
                         tagNameDtos.Add(new TagNameDto()
                         {
-                            Name = tag.Name
+                            Name = tagRelation.Tag.Name
                         });
                     }
                 }
@@ -55,30 +56,13 @@ public class IssueController : ControllerBase
     {
         var issueRepository = new IssueRepository(DatabaseContext.Instance);
         var tagsRepository = new TagsRepository(DatabaseContext.Instance);
+        var issueTagRelationRepository = new IssueTagRelationRepository(DatabaseContext.Instance);
         //var userRepository = new UserRepository(DatabaseContext.Instance);
         
         
         //var doka = await tagsRepository.GetTags();
 
-        var tagDtos = issueDto.Tags;
-        var tags = new List<Tag>();
-        foreach (var tagDto in tagDtos)
-        {
-            tags.Add(await tagsRepository.GetTag(tagDto.Name));
-        }
-
-        /*foreach (var tagDto in tagDtos)
-        {
-            foreach (var tag in doka)
-            {
-                if (tag.Name == tagDto.Name)
-                {
-                    tags.Add(tag);
-                }
-                
-            }
-            
-        }*/
+        
 
         var newIssue = new Issue()
         {
@@ -86,11 +70,16 @@ public class IssueController : ControllerBase
             Date = DateTime.Now,
             IsSolved = false,
             Text = issueDto.Text,
-            Tags = tags,
             Username= issueDto.Username
         };
 
         await issueRepository.AddIssue(newIssue);
+        
+        var tagDtos = issueDto.Tags;
+        foreach (var tagDto in tagDtos)
+        {
+            issueTagRelationRepository.AddRelation(newIssue, await tagsRepository.GetTag(tagDto.Name));
+        }
         
     }
 }
